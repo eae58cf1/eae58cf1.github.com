@@ -9,4 +9,4 @@ The quran comprises of 114 chapters for a total of about 611 pages.
 I'm reading through the Quran and will be sharing some of the insights that I'm gathering as I progress in a few short notes.
 
 You'll find these here, grouped by Chapter:
-- [Click here](quran/16/) to read about Surat Alnahl.
+- [Click here](16/) to read about Surat Alnahl.
