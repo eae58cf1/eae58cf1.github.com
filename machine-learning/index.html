@@ -1,0 +1,19 @@
+---
+title: Machine Learning
+layout: machine-learning
+---
+<ul class="post-list">
+  {% for post in site.categories.machine-learning reversed %}
+    <li>
+      <h2> 
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+      <div class="post-content">
+        {{ post.content }}
+      </div>
+    </li>
+  {% endfor %}
+</ul>
+
+<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+

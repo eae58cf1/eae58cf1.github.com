@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/yazinsai/jekyll-plain
-  revision: 03ecd5d00eaf924bbf023cbfbd0963dc1313c226
+  revision: b38be9d63553d056e8d34d7687a51560b5b8d8a9
   specs:
-    plain (0.1.5)
+    plain (0.1.7)
       jekyll (~> 3.3)
 
 GEM
