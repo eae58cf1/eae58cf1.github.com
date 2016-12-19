@@ -1,0 +1,26 @@
+---
+layout: default
+---
+{{ content }}
+
+{% include islam/quran/disclaimer.md %}
+
+<script>
+String.prototype.toArabicDigits= function(){
+ var id= ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+ return this.replace(/[0-9]/g, function(w){
+  return id[+w]
+ });
+}
+
+// Retrieve the verse
+var verseElem = document.getElementsByClassName('quran-verse')[0];
+var verse = verseElem.innerHTML;
+
+// Update the aya format from '{##}'
+verse = verse.replace(/{(\d+)}/g, "<span class='verse-number'>۝ $1</span>");
+verse = verse.toArabicDigits();
+
+// Put it back in
+verseElem.innerHTML = verse;
+</script>
