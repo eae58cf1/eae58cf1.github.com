@@ -1,0 +1,26 @@
+---
+layout: page
+title: My Bookshelf
+main_menu: true
+---
+{% assign books = site.categories.bookshelf %}
+<p>A list of some of the books that I've read, with the most recent ones listed first. You'll notice that I mostly read business books, though there are some other genres in there too.</p>
+
+<ul class="post-list">
+  {% for book in books %}
+    {% unless book.private %}
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/{{ book.cover }}" title="{{ book.title }}">
+        </div>
+        <div class="media-body">
+          <h3><a href="{{ book.url | prepend: site.baseurl }}">{{ book.title }}</a></h3>
+
+          {% include rating.html rating=book.rating %}
+        </div>
+      </div>
+    </li>
+    {% endunless %}
+  {% endfor %}
+</ul>

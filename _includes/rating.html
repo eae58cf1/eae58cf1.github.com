@@ -1,0 +1,10 @@
+<div class="rating">
+  {% for i in (1..include.rating) %}
+    <span class="on">★</span>
+  {% endfor %}
+  {% assign remain = 5 | minus: include.rating %}
+  {% for i in (1..remain) %}
+    <span class="off">☆</span>
+  {% endfor %}
+</div>
+
