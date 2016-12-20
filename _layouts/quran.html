@@ -3,7 +3,8 @@ layout: default
 ---
 {{ content }}
 
-{% include islam/quran/disclaimer.md %}
+{% capture myinclude %}{% include islam/quran/disclaimer.md %}{% endcapture %}
+{{ myinclude | markdownify }}
 
 <script>
 String.prototype.toArabicDigits= function(){

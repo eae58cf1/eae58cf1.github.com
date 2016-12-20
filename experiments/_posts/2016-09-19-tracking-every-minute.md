@@ -6,7 +6,7 @@ excerpt: |
   The title says it all. I got the idea from a friend who's been doing this thing [for years](http://david.achkar.com/life-log/) and thought I'd try it out for a month.
 duration: 1 month
 date-started: 2016-09-19
-success: true
+status: success
 ---
 
 ## The experiment
