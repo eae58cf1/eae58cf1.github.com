@@ -6,7 +6,7 @@ categories: bookshelf
 rating:
 link:
 cover: nocover.jpg
-private: true
+published: false
 ---
 - The deciding factor for determining the importance of knowledge are the needs of the Ummah (which change over time), not some random preconceived field of study
 - Focusing on the big picture, over the course of an entire lifetime is both elusive and yet so crucial! There are always other things that are more urgent, but *nothing* that's more important. Stretching yourself too thin is almost inevitable when you have such a large goal, and in the absence of continual undying follow-up.

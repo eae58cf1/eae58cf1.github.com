@@ -6,7 +6,7 @@ categories: bookshelf
 rating:
 link:
 cover: nocover.jpg
-private: true
+published: false
 ---
 - The importance of stepping up to those in power, and letting them know the truth no matter what the circumstance. This comes with the added benefits of making you feel better about yourself, and gaining their respect (in some cases).
 
