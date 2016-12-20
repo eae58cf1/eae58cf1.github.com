@@ -22,6 +22,8 @@ url: "https://yazin.org" # the base hostname & protocol for your site, e.g. http
 enforce_ssl: yazin.org
 twitter_username: yazinsai
 github_username:  yazinsai
+analytics: UA-89256258-1
+
 
 # Custom stuff
 permalink: /:categories/:title/
