@@ -64,4 +64,8 @@ I checked the list and found the more approachable-sounding ["Everyman" schedule
 That's what I'm trying tonight.
 
 ### Day 6:
-(ongoing)
+The trick didn't work .. I slept right through the alarm (which I didn't even hear, despite being a light sleeper) for a grand total of 7 hours, not the 3.5 hours I was shooting for.
+
+I'm going to try this one more time today. Overall, I've been feeling less productive, more agitated (and according to my wife, less cheery). What's worse is, I've actually been sleeping more, on average, than my previous 5 - 6 hours a day!
+
+One more shot, tonight.
