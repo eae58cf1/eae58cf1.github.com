@@ -6,7 +6,7 @@ excerpt: |
   I've read alot about polyphasic sleep in the past (even hearing that it was inspired by da Vinci) and I found it captivating. In this experiment, I attempt to take this to the max, and sleep on just 2 hours a day for a month.
 duration: 1 month
 date-started: 2016-12-15
-status: ongoing
+status: failed
 ---
 
 ## The experiment
@@ -69,3 +69,10 @@ The trick didn't work .. I slept right through the alarm (which I didn't even he
 I'm going to try this one more time today. Overall, I've been feeling less productive, more agitated (and according to my wife, less cheery). What's worse is, I've actually been sleeping more, on average, than my previous 5 - 6 hours a day!
 
 One more shot, tonight.
+
+### Day 7
+Went to sleep at midnight &mdash; and woke up at &hellip; 7am. Experiment over.
+
+## What I learned
+- I didn't think much of this experiment coming in &mdash; low risk, high reward right? Wrong. Messing with sleep can lead to serious reprecussions; not physically mind you (I felt fine), but I was drained mentally. I recall the last week being a week characterized by overall dullness. I even felt depressed at times (with thoughts of what the heck I was doing with my life). My wife described me as gloomy. I was changed. 
+- Even worse, I actually ended up sleeping more as a result of my sleep deprivation. I'll go back to my 5 hour a day sleeping schedule now, thank you very much.
