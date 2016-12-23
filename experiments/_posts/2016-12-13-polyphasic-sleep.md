@@ -22,7 +22,7 @@ My schedule is pretty flexible these days, so this is something I'm planning to 
 ## Setup
 I relied on [this source alot](https://www.polyphasicsociety.com/polyphasic-sleep/overviews/uberman-2/) as I plan on implementing the "Uberman" schedule (there are several varieties available, but this is the most extreme). It describes the optimum sleeping approach (minimum amount of sleep required to get you through a reasonably productive day). I figure if I'm going to try this, might as well go all in.
 
-It involves taking 6 naps a day, every 4 hours for 20 minutes each. That's it! The timings I picked are midnight, 4am, 8am, noon, 4pm and 8pm. I started the experiment on December 12, 2016.
+It involves taking 6 naps a day, every 4 hours for 20 minutes each. That's it! The timings I picked are midnight, 4am, 8am, noon, 4pm and 8pm. I started the experiment on December 15th, 2016.
 
 ## Daily Log
 

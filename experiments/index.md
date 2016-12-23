@@ -3,7 +3,7 @@ layout: page
 title: Experiments
 main-menu: true
 ---
-Here's where I try out random things that in order to get better. Experiments typically last between a week and a month, and involve me doing something **new**. They vary in difficulty, but the idea is to push myself to get better.
+Here's where I try out random things that push me to get better *somehow*. Experiments typically last between a week and a month, and involve me doing something **new**. They vary in difficulty, but the idea is to push myself to get better.
 
 {% assign experiments = site.categories.experiments %}
 {% for experiment in experiments %}
