@@ -2,9 +2,7 @@
 layout: page
 categories: perpetual
 title: Masterplan
-published: false
 ---
-
 My goal is to create a plane capable of perpetual flight. 
 <!-- (If you're curious you can find out more about my motivations for building this project [here](/masterplan/)) -->
 
@@ -12,7 +10,7 @@ My goal is to create a plane capable of perpetual flight.
 
 None I can foresee, since I know absolutely nothing about plane-building! 
 
-So I've got a lot of things to learn. Thankfully though, we live in a day and age when many people on the plane (my lucky self included!) have access to the sum of human knowledge at our fingertips. This'll make things easier. I'll attempt to work on both the textbook (theoretical) and field (practical) fronts.
+So I've got a lot of things to learn. Thankfully though, we live in a day and age when many people on the planet (my lucky self included!) have access to the sum of human knowledge at our fingertips. This'll make things easier. I'll attempt to work on both the textbook (theoretical) and field (practical) fronts.
 
 ## The Plan
 
@@ -46,9 +44,43 @@ So that's the goal: reduce the power consumption on the plane. The bit that uses
 
 But why do we need a motor in the first place? To overcome drag. Not to keep the plane in the air (that's what lift does), but to keep it moving forward (so it can generate the lift it needs to stay in the air).
 
-So let's revisit that goal &hellip; in order to reduce the power required for the plane, we need to reduce the opposing drag. The lower drag, the less work we need to do to overcome it.
+So let's revisit that goal &hellip; in order to reduce the power required for the plane, we need to reduce the opposing drag. The lower the drag, the less work we need to do to overcome it.
 
-So that's our specific goal then: to design a plane with the least possible drag.
+So that's our specific goal then: to **design a plane with the least possible drag**.
+
+So here you go: 
+
+. <-- This speck has super-low drag. 
+
+Unfortunately, it doesn't generate any useful lift either. See it turns out that you can't really eliminate drag at all while also doing useful work. We need ot make sure that we're not just reducing drag, but also that we're able to generate enough lift to keep the plane in the air (and not fall).
+
+This means that our Lift must be greater than the Weight of the plane:
+
+$$L \ge W$$
+
+We can't generate any Lift without moving, and we need to overcome drag in order to start (and continue) moving. So that's it. We need to figure out what the weight is, play around with various parameters in order to give us the minimum drag (while generating this minimum lift requirement) and then repeat.
+
+Our new goal becomes: **design a plane that generates enough lift to support it's weight, at the least possible drag**
+
+Of course, things get more complicated when you realize that everything changes during the flight (Lift, Drag, etc.) based on the airspeed, weather, angle of attack and a few other things.
+
+**Note:** All of this was put together based on alot of reading from [here](https://www.grc.nasa.gov/www/k-12/airplane/guided.htm), [here](http://mb-soft.com/public2/lift.html) and talking to a friend with a PhD in Aeronautics. If something's wrong, [let me know](mailto:hi@yaz.in).
+
+## Steps
+
+Here's an initial, high-level list:
+
+- [ ] Pick a suitable wing shape (airfoil) and size
+- [ ] Find the drag at desired/expected operating conditions
+- [ ] Pick a motor that can handle that drag, and then some
+- [ ] Find required storage and generation parameters
+- [ ] Simulate the plane before construction
+- [ ] Build a scaled version and test it
+- [ ] Get feedback, rinse and repeat
+
+Sounds simplistic, I know. But each of those check boxes is a project in its own right. Still we're going to go through these one by one and strike them off.
+
+Also, this list will change a lot &mdash; I'll be tracking progress of the project on the main [Perpetual page](/perpetual).
 
 {% comment %}
 Let's take a closer look at what needs to be done in each section.
