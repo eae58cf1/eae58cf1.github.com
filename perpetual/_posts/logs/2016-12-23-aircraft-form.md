@@ -34,6 +34,8 @@ A beautiful solution, that doesn't rely on any sort of fuel to move! Alas, there
 - They need to be pumped with gases that are lighter than air. Lighter-than-air gases include Hot air (like a hot air balloon which would require a combustion fuel for heating), Neon (rare, expensive), Ammonia (poisonous), Methane (flammable), Hydrogen (extremely flammable) and Helium (expensive). Here in the UK, Helium costs about [&pound;100 per m<sup>3</sup>](https://www.boconlineshop.com/shop/en/uk/helium-110745-101) (~$125). 
 - They are huge, since you need to displace a large amount of air to compensate for any sort of added weight. Consider that air has a density of 1.29 kg/m<sup>3</sup>. If you're using Helium to lift the airship (Helium has a density of 0.164 kg/m<sup>3</sup>), then you get just 1.1 kg of lift for every m<sup>3</sup> of the gas. That means you'll need several m<sup>3</sup> to get anything useful up in the air.
 
+{% comment %} TODO: Consider [thermal gliders](https://en.wikipedia.org/wiki/Lift_(soaring)) {% endcomment %}
+
 ## The remaining contenders
 This just leaves Helicopters and Fixed Wing airplanes. While both could technically work, [fixed wing airplanes are more efficient than helicopters](http://aviation.stackexchange.com/a/5192/18340).
 

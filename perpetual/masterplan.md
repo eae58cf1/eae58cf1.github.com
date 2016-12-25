@@ -4,7 +4,7 @@ categories: perpetual
 title: Masterplan
 ---
 My goal is to create a plane capable of perpetual flight. 
-<!-- (If you're curious you can find out more about my motivations for building this project [here](/masterplan/)) -->
+<!-- (If you're curious you can find out more about my motivations for building this project [here](/life/)) -->
 
 ## Challenges
 
