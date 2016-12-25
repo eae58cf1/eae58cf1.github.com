@@ -41,7 +41,24 @@ Here's the result:
 
 ![NASA FoilSIM III](/assets/projects/perpetual/nasa-foilsim-results-v1.png)
 
-I had to pick a higher speed of 30 km/h in order to get the necessary lift (16N &asymp; 1.6kg). Here's the raw output data in txt format ([View wing data](/assets/projects/perpetual/airfoil-v1.txt))
+Ended up looking somewhat similar to [this glider airfoil](http://airfoiltools.com/airfoil/details?airfoil=e214-il), even though I just messed around with alot of knobs until I found the results I was looking for. If I knew how to simulate the simulator, I could write a loop to test ranges of values and programmatically find the most desired result. Anyway, the results are pretty good (though definitely not the best possible). 
+
+I had to pick a higher speed of 30 km/h in order to get the necessary lift (16N &asymp; 1.6kg). Here's the raw output data in txt format ([View wing data](/assets/projects/perpetual/airfoil-v1.txt)).
+
+## Results
+
+{% highlight shell %}
+ Camber = 5.0 % chord , Thickness = 10.0 % chord ,
+ Chord = 0.2 m , Span = 2.0 m , Aspect Ratio = 10 ,
+ Surface Area = 0.4 sq m ,
+  Angle of attack = 3.0 degrees ,
+ Standard Earth Atmosphere
+ Altitude = 75 m , Density = 1.216kg/cu m
+ Pressure = 100.365kPa, Temperature = 14C,
+ Airspeed = 30 km/hr ,
+  Lift  = 16 Newtons 
+  Drag  = 1 Newtons 
+{% endhighlight %}
 
 {% comment %}
 ## Determining plane weight
