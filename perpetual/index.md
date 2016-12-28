@@ -14,6 +14,7 @@ I'm on a mission to build a perpetually flying plane &mdash; a plane that stays 
   - [X] [Deciding on an aircraft form](logs/aircraft-form) &mdash; Decided: Fixed wing
   - [X] [General guidelines for wing design](logs/general-guidelines-for-wing-design)
   - [X] [Design initial wing parameters](logs/initial-wing-parameters)
+  - [X] [Previous work done on solar UAVs](logs/previous-work)
 - [ ] Find the drag at desired/expected operating conditions
 - [ ] Pick a motor that can handle that drag, and then some
 - [ ] Find required storage and generation parameters
