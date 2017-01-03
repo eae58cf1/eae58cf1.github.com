@@ -7,3 +7,5 @@ layout: default
 # Hi, I'm Yazin
 
 I'm a [Muslim](/islam) engineer, currently based just outside London.
+
+I'm currently working on a project to create a plane that's capable of perpetual flight. Read all about that [here](/perpetual).

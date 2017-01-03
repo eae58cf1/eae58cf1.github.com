@@ -10,6 +10,8 @@ I'm on a mission to build a perpetually flying plane &mdash; a plane that stays 
 
 ## Project status
 
+> UPDATE: I'm currently on break until mid-Jan, after which I'll resume daily updates on this project.
+
 - [ ] Pick a decent wing shape (airfoil) and size
   - [X] [Deciding on an aircraft form](logs/aircraft-form) &mdash; Decided: Fixed wing
   - [X] [General guidelines for wing design](logs/general-guidelines-for-wing-design)
