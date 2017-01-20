@@ -50,6 +50,8 @@ We'll work on alleviating each of those 3 restrictions at a later milestone, but
 
 Ok, so even to get to this point -- a point where we can do this super-restricted test is going to need quite a bit of work. Firstly, we need to do a test to make sure that we can get a tiny range covered and back. I had a look at Google maps and it looks like the Turkish border city of Antakya is about 27km from the Syrian town of Salqin. If you can get a UAV that can go out 30km, and then fly back -- then you're in business.
 
+![Distance required for mission v0](/assets/projects/teleport/mission-v0-distance.png)
+
 There are some restrictions though. Assuming you're going to be bringing this to Turkey somehow, you're going to need to have some sort of way of putting this together yourself using very basic tools. You can bring in a motor, some carbon fiber struts, a Pixhawk and even some batteries. An airframe might be too big to bring in, unless it can be easily disassembled and reassembled.
 
 So we have:
