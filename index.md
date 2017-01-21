@@ -8,4 +8,4 @@ layout: default
 
 I'm a [Muslim](/islam) engineer, currently based just outside London.
 
-I'm currently working on a project to create a plane that's capable of perpetual flight. Read all about that [here](/perpetual).
+I'm currently working on [Teleport](/teleport) where I aim to create a simple UAV that can deliver humanitarian aid to hard-to-reach areas.

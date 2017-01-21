@@ -3,7 +3,7 @@ layout: page
 categories: teleport
 title: Masterplan
 ---
-# Start with the Why
+## Start with the Why
 
 My goal, over the next few months, is to find a solution to a problem that humanitarian aid agencies face in places across the world: **the logistics issue of delivering supplies to towns and cities under siege**. 
 
@@ -15,9 +15,9 @@ This is the 21<sup>st</sup> century. We can do better. After messing around with
 
 My goal is to **provide individuals everywhere with the means to directly contribute to support the people in need**.
 
-# High level plan
+## High level plan
 
-My focus for the past few weeks, before the break started, was on [building a perpetually flying UAV](/perpetual). The idea being that, if you can build a plane that flys forever, then everything else is easy. Want to add payload, fine. That's easier to do. Essentially, the idea is to tackle the most difficult problem head-on and see what transpires: range.
+My focus for the past few weeks, before the break started, was on [building a perpetually flying UAV](/perpetual). The idea being that, if you can build a plane that flys forever, then everything else is easy. Want to add payload, fine. That's easier to do. Essentially, the idea is to tackle the most difficult problem first (range) and see what transpires.
 
 The only thing is, this takes *serious* time. The payout is also unclear. What will I gain when I do actually build this thing? How does it fit into the goal of aiding the people in need in Syria and elsewhere?
 
@@ -35,7 +35,7 @@ It's not to bet everything on a peripheral goal. But to get to the point we're y
 
 My two cents. I think it's pretty clear what I would do next.
 
-# Details
+## Details
 
 Ok, the high level bit was relatively easy to do once I'd written it down. Now for the tricky bit: how do you actually implement this in real life?
 
@@ -60,7 +60,7 @@ So we have:
 - have a basic release mechanism, for dropping the orange
 - video, for proof
 
-## Previous work
+### Previous work
 
 Spotted a few videos on Youtube showing long range, variable payload flights:
 - [15km](https://www.youtube.com/watch?v=Wyky6my9yFY)
@@ -69,7 +69,7 @@ Spotted a few videos on Youtube showing long range, variable payload flights:
 
 Also, read about a project (now defunct) called the [Syria Airlift project](http://syriaairlift.org) started in Stanford, CA. The project doesn't seem to have gotten very far beyond a prototype &mdash; they did no pilot runs in Turkey/Syria as far as I can tell. More on that [here](http://www.afcea.org/content/?q=node/13875).
 
-## Legal stuff
+## Legal
 
 While the UN has already approved and passed resolutions supporting the "non-consensual delivery of humanitarian aid" to Syria, Turkey still has rules around drone use. I [had a look](http://uavcoach.com/drone-laws-in-turkey/) and it seems that they are pretty stringent (all flights, including those of model aircraft have to be pre-approved by the Civil Aviation Authority there). Lebanon appears to be [more lax](https://uavsystemsinternational.com/drone-laws-by-country/lebanon-drone-laws/), though as a party to the conflict they might not be so supportive.
 
