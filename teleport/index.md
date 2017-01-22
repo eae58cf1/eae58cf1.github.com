@@ -14,7 +14,7 @@ layout: page
 
 **Checkpoint #1: Deliver an orange 25km away and return autonomously**
 
-- [ ] Determine attributes required for plane
+- [ ] [Determine design attributes required for plane](/teleport/logs/plane-design)
 - [ ] Build / procure the plane
 - [ ] Test the plane with manual flight
 - [ ] Test autonomous flight
