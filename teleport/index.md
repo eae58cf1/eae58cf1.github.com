@@ -14,9 +14,11 @@ layout: page
 
 **Checkpoint #1: Deliver an orange 25km away and return autonomously**
 
-- [ ] [Determine design attributes required for plane](/teleport/logs/plane-design)
+- [X] [Determine design attributes required for plane](/teleport/logs/plane-design)
 - [ ] Build / procure the plane
-- [ ] Test the plane with manual flight
+  - [X] Order the full-sized plane &mdash; *getting the MyTwinDream; expected delivery mid-Feb*
+  - [ ] [Build the scaled-down model](/teleport/logs/build-the-plane/) &mdash; ongoing
+  - [ ] Run an autonomous flight
 - [ ] Test autonomous flight
 - [ ] Setup payload test (an orange)
 - [ ] Test flight with payload release

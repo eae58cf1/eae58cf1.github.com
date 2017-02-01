@@ -3,7 +3,7 @@ layout: post
 categories: teleport logs
 title: Design attributes for plane
 ---
-[We already know] we're going to need to use a fixed-wing body in order to achieve the sort of range we're shooting for with this plane. Now let's do a few behind-the-napkin calculations to narrow the range of options down to something manageable. 
+[We already know](/perpetual/logs/aircraft-form) we're going to need to use a fixed-wing body in order to achieve the sort of range we're shooting for with this plane. Now let's do a few behind-the-napkin calculations to narrow the range of options down to something manageable. 
 
 The few hours we spend doing calculations now will save us a lot of time later as we try to pick a suitable frame for the mission. Specifically, we'll try to determine the minimum size and power requirements in order to achieve the 30km x 2 milestone trip we're working towards.
 
@@ -65,3 +65,12 @@ To calculate the wing Aspect Ratio, we simply do $$\text{Aspect Ratio} = \frac{b
 While I still don't know (after several hours of searching) enough about aerodynamics to be able to tell you exactly what the parameters need to be in order to support a trip with such distance, here are a few guidelines I was able to obtain from the above relationships:
 
 1. \\(P_\text{level} \propto \frac{C_{D_a}}{\sqrt{C_{L_a}^3}} \\). Our job is to minimize \\(P_\text{level}\\) while achieving the minimum lift required in order to keep the plane in the air, which is \\(W\\)
+2. The Lift/Drag curve is what determines how efficiently a plane is able to attain lift, and at what power draw. I wasn't able to attain a minimum dimension like I hoped for (e.g. wing span must be greater than 1.5m) but I did understand how the different factors influence each other.
+
+## Buying the plane
+
+From our research though, it's clear that the MTD ([MyTwinDream](https://www.readymaderc.com/store/index.php?main_page=product_info&products_id=4320)) is easily capable of meeting the requirements for this flight. I even verified this by asking a Youtuber that had one:
+
+![MyTwinDream range](/assets/projects/teleport/mytwindream-range.png)
+
+I've gone ahead and ordered one. Since it'll take a few weeks to get here from China, we'll talk about running some smaller scale tests in the mean time. Next up, we'll pick a body for immediate testing.
