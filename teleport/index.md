@@ -17,7 +17,9 @@ layout: page
 - [X] [Determine design attributes required for plane](/teleport/logs/plane-design)
 - [ ] Build / procure the plane
   - [X] Order the full-sized plane &mdash; *getting the MyTwinDream; expected delivery mid-Feb*
-  - [ ] [Build the scaled-down model](/teleport/logs/build-the-plane/) &mdash; ongoing
+  - [ ] [Build the scaled-down model](/teleport/logs/build-the-plane/)
+    - [X] 1<sup>st</sup> attempt: [Failed](/teleport/logs/build-the-plane)
+    - [ ] 2<sup>nd</sup> attempt: ongoing
   - [ ] Run an autonomous flight
 - [ ] Test autonomous flight
 - [ ] Setup payload test (an orange)

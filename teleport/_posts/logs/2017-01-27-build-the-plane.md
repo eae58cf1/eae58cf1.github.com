@@ -52,6 +52,13 @@ I hadn't had much practice flying fixed wing craft so maybe I just didn't know w
 
 I've now revised [the plan](/teleport) to include Autonomous flights only and not manual ones. This also saves me the trouble of figuring out how to get radio communication working over long distances.
 
+## Lessons learned
+
+- Don't learn to fly a plane with a real plane. Use a simulator to get the hang of things first, or just use an autopilot with waypoints configured
+- The plane has to be able to gain altitude quicker
+  - Increase propeller size for more power
+  - Reduce the weight of the plane (use smaller battery pack, autopilot)
+
 ## Next steps
 I'll run another test with the spare body that I have.
 
