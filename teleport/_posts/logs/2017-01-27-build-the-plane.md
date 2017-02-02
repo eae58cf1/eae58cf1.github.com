@@ -8,7 +8,7 @@ Having [already decided](/teleport/logs/plane-design) on the airframe we'll be u
 After all, I don't want the large 2m wingspan MTD plane to be my first attempt at such a test; a crash landing would mean another month of waiting!
 
 ## The smaller test
-I order a couple of the [AXN Clouds Fly](https://hobbyking.com/en_us/floater-jet-epo-arf.html) floater, which arrived next day. This is smaller (just 1.1m wingspan) with a much lower wing area (remember that a proportionally sized 2m wing has 4 times the wing area of a 1m wing, not double). Still, the goal with this plane is a simple one: **run an autonomous flight as far as we possibly can**.
+I ordered a couple of the [AXN Clouds Fly](https://hobbyking.com/en_us/floater-jet-epo-arf.html) floater, which arrived next day. This is smaller (just 1.1m wingspan) with a much lower wing area (remember that a proportionally sized 2m wing has 4 times the wing area of a 1m wing, not double). Still, the goal with this plane is a simple one: **run an autonomous flight as far as we possibly can**.
 
 ## Build
 The foamie I ordered was just the body &mdash; it did not include any electronics, so I had to plug in the:
