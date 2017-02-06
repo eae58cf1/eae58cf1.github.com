@@ -43,4 +43,9 @@ I ordered the [Seriously Pro F3](http://seriouslypro.com/spracingf3) flight cont
 
 I had to solder the header pins in place and then start with the configuration of the board itself. The biggest time sink was getting the GPS unit to talk with the F3. I was using a Ublox NEO-6M (that was supposed to be supported by the F3) but it just wasn't flashing blue like it should. I'll try and wrap all those things up today and take it out for a test flight.
 
-The only problem is that I lost the prop adapter collet that held the propeller in place after the crash &mdash; I ordered a replacement but that's going to take a week to arrive. I'll figure something out.
+The only problem is that I lost the prop adapter collet that held the propeller in place after the crash &mdash; I ordered a replacement but that's going to take a week to arrive. I'll figure something out
+
+![INAV GPS Not working](/assets/projects/teleport/inav-not-working-gps.png)
+
+**UPDATE**: Spent the whole day trying to get the GPS to play nice with the autopilot and it did not work &mdash; which is strange since I was able to get it work for a brief minute before the whole thing just stopped working. Still, I won't waste more time on getting it to work &mdash; I've ordered the newer [Ublox NEO-8MN](https://www.u-blox.com/en/product/neo-m8-series) that they recommend and expect to get that in a few weeks. For now, I'll just fall back to the APM for further testing.
+
