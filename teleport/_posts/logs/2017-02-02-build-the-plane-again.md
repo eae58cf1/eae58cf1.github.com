@@ -13,8 +13,8 @@ The plane body was mostly in tact, so I'll be using the same frame. I'll be maki
 - ✅ Use autopilot from the get-go. No manual flying
 
 Also, some minor things to remember to do (based on the state of the retrieved plane):
-- Make sure that the ESC is configured with a voltage cut-off. The motor was running even after the plane crashed into the tree, and continued to run until the 3-cell LiPo battery I was using was drained to 1.2V across all 3 cells! Luckily, I was able to [charge it back](https://www.rcgroups.com/forums/showthread.php?1072324-(HOW-TO)-Recovering-over-discharged-lipos).
-- Put lock-tight on the bullet prop adapter to prevent it from flying off. I lost mine somewhere in the woods.
+- ✅ Make sure that the ESC is configured with a voltage cut-off. The motor was running even after the plane crashed into the tree, and continued to run until the 3-cell LiPo battery I was using was drained to 1.2V across all 3 cells! Luckily, I was able to [charge it back](https://www.rcgroups.com/forums/showthread.php?1072324-(HOW-TO)-Recovering-over-discharged-lipos). I got this done, after finding [this gem of a video](https://www.youtube.com/watch?v=E6epG5E8gAQ) that showed the calibration process, with complete list of options [here](https://dronebuildersblog.wordpress.com/2016/01/10/emax-blheli-brushless-esc-programming/#ep).
+- ✅ Put lock-tight on the bullet prop adapter to prevent it from flying off. I lost mine somewhere in the woods.
 - ✅ Properly secure the servos inside the fuselage (for elevator and rudder). Noticed that these were loose when inspecting the plane post-crash.
 
 Onwards&hellip;
@@ -38,6 +38,10 @@ There you go &hellip; our LiIon pack has **2.13X more energy density** than the 
 
 For this example, I'll be using just one cell, so I'll need to monitor the power output and replace the cell with the LiPo if it's insufficient.
 
+I've gone ahead and built the cell, include an XT-60 connector and a balance connector for charging:
+
+![Custom built LiPo pack](/assets/projects/teleport/custom-lipo-cell.jpg)
+
 ## The Autopilot
 I ordered the [Seriously Pro F3](http://seriouslypro.com/spracingf3) flight controller as a replacement for the bulky APM that I was previously using. I received that the next day (today) and spent a few solid hours going through the setup.
 
@@ -49,3 +53,10 @@ The only problem is that I lost the prop adapter collet that held the propeller 
 
 **UPDATE**: Spent the whole day trying to get the GPS to play nice with the autopilot and it did not work &mdash; which is strange since I was able to get it work for a brief minute before the whole thing just stopped working. Still, I won't waste more time on getting it to work &mdash; I've ordered the newer [Ublox NEO-8MN](https://www.u-blox.com/en/product/neo-m8-series) that they recommend and expect to get that in a few weeks. For now, I'll just fall back to the APM for further testing.
 
+## Finishing touches
+I've put everything together again, and now we're ready for the test flight:
+![AXN - Take 2](/assets/projects/teleport/axn-take-2.jpg)
+
+Unfortunately, it was insanely windy today (9th Feb) so I couldn't take it out for a spin. I'll plan to do that first thing tomorrow.
+
+## Flight #2
