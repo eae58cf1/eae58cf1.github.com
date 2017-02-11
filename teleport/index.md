@@ -21,7 +21,8 @@ layout: page
 - [ ] Run an autonomous flight with the scaled-down plane
   - ❎ 1<sup>st</sup> flight attempt: [Failed](/teleport/logs/build-the-plane)
   - ❎ 2<sup>nd</sup> flight attempt: [Failed](/teleport/logs/build-the-plane-again)
-  - ➡️️ 3<sup>rd</sup> flight attempt: [Ongoing](/teleport/logs/mini-flight-take-3)
+  - ❎ 3<sup>rd</sup> flight attempt: [Failed](/teleport/logs/mini-flight-take-3)
+  - ➡️️ 4<sup>th</sup> flight attempt: [Ongoing](/teleport/logs/mini-flight-take-4)
 - [ ] Test autonomous flight with scaled-down plane
 - [ ] Build full-sized plane
 - [ ] Test autonomous flight with full-sized plane
