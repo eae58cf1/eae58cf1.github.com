@@ -74,7 +74,7 @@ Unfortunately, it was insanely windy today (9th Feb) so I couldn't take it out f
 ## Flight #2
 Today I went out to fly the plane.
 
-![Plane ready to roll](/assets/projects/teleport/axn-take-2-ready.png)
+![Plane ready to roll](/assets/projects/teleport/axn-take-2-ready.jpg)
 
 **First attempt**:
 - I noticed that the ESC would continue beeping as soon as I plugged in the power. Once I moved the Throttle stick up, it would start the calibration procedure (which I didn't want). Turns out this behavior happened because it was receiving a high initial PWM value (>850) from the APM. I used my servo tester to provide an 800 value and then switched it back to the APM and it worked.
