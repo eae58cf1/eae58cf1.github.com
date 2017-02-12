@@ -18,12 +18,12 @@ layout: page
 - ✅ Build / procure the scaled-down plane
   - ✅ Order the full-sized plane &mdash; *getting the MyTwinDream; expected delivery mid-Feb*
   - ✅ [Build the scaled-down model](/teleport/logs/build-the-plane/)
-- [ ] Run an autonomous flight with the scaled-down plane
+- ✅ Run an autonomous flight with the scaled-down plane
   - ❎ 1<sup>st</sup> flight attempt: [Failed](/teleport/logs/build-the-plane)
   - ❎ 2<sup>nd</sup> flight attempt: [Failed](/teleport/logs/build-the-plane-again)
   - ❎ 3<sup>rd</sup> flight attempt: [Failed](/teleport/logs/mini-flight-take-3)
-  - ➡️️ 4<sup>th</sup> flight attempt: [Ongoing](/teleport/logs/mini-flight-take-4)
-- [ ] Test autonomous flight with scaled-down plane
+  - ✅ 4<sup>th</sup> flight attempt: [Success!](/teleport/logs/mini-flight-take-4)
+- ➡️️ Test autonomous waypoint flight with scaled-down plane <!-- [Ongoing](/teleport/logs/mini-waypoint-flight) -->
 - [ ] Build full-sized plane
 - [ ] Test autonomous flight with full-sized plane
 - [ ] Setup payload test (an orange)
