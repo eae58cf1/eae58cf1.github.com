@@ -12,11 +12,11 @@ layout: page
 
 ## Project status
 
-**Checkpoint #1: Deliver an orange 25km away and return autonomously**
+**🚧  Checkpoint #1: Deliver an orange 25km away and return autonomously**
 
 - ✅ [Determine design attributes required for plane](/teleport/logs/plane-design)
 - ✅ Build / procure the scaled-down plane
-  - ✅ Order the full-sized plane &mdash; *getting the MyTwinDream; expected delivery ~~mid-Feb~~mid-March*
+  - ✅ Order the full-sized plane 
   - ✅ [Build the scaled-down model](/teleport/logs/build-the-plane/)
 - ✅ Run an autonomous flight with the scaled-down plane
   - ❎ 1<sup>st</sup> flight attempt: [Failed](/teleport/logs/build-the-plane)
@@ -24,9 +24,9 @@ layout: page
   - ❎ 3<sup>rd</sup> flight attempt: [Failed](/teleport/logs/mini-flight-take-3)
   - ✅ 4<sup>th</sup> flight attempt: [Success!](/teleport/logs/mini-flight-take-4)
 - ➡️️ [Test autonomous waypoint flight with scaled-down plane](/teleport/logs/mini-waypoint-flight)
-- [ ] Build full-sized plane
+- [ ] Build full-sized plane (expected delivery late Feb)
 - [ ] Test autonomous flight with full-sized plane
 - [ ] Setup payload test (an orange)
 - [ ] Test flight with payload release
-- [ ] Communicate with aid agencies in Lebanon/Turkey for test flight
+- ➡️️  [Coordinate with aid agencies in Lebanon/Turkey](/teleport/logs/aid-agencies)
 - [ ] Fly there and test orange delivery!
