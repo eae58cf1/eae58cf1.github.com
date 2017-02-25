@@ -24,6 +24,11 @@ layout: page
   - ❎ 3<sup>rd</sup> flight attempt: [Failed](/teleport/logs/mini-flight-take-3)
   - ✅ 4<sup>th</sup> flight attempt: [Success!](/teleport/logs/mini-flight-take-4)
 - ➡️️ [Test autonomous waypoint flight with scaled-down plane](/teleport/logs/mini-waypoint-flight)
+  - ❎ 1<sup>st</sup> flight attempt: [Failed](/teleport/logs/mini-waypoint-attempt-1)
+  - ❎ 2<sup>nd</sup> flight attempt: [Failed](/teleport/logs/mini-waypoint-attempt-2)
+  - ❎ 3<sup>rd</sup> flight attempt: [Failed](/teleport/logs/mini-waypoint-attempt-3)
+  - ❎ 4<sup>th</sup> flight attempt: [Failed](/teleport/logs/mini-waypoint-attempt-4)
+  - ❎ 5<sup>th</sup> flight attempt: [Failed](/teleport/logs/mini-waypoint-attempt-5)
 - [ ] Build full-sized plane (expected delivery late Feb)
 - [ ] Test autonomous flight with full-sized plane
 - [ ] Setup payload test (an orange)
