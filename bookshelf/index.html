@@ -11,19 +11,21 @@ excerpt: |
 
 <ul class="post-list">
   {% for book in books %}
-    {% unless book.private %}
     <li>
       <div class="media">
         <div class="media-image">
           <img class="cover" src="/assets/bookshelf/{{ book.cover }}" title="{{ book.title }}">
         </div>
         <div class="media-body">
-          <h3><a href="{{ book.url | prepend: site.baseurl }}">{{ book.title }}</a></h3>
-
-          {% include rating.html rating=book.rating %}
+          {% if book.reading == 1 %}
+            <h3>{{ book.title }}</h3>
+            *Currently reading*
+          {% else %}
+            <h3><a href="{{ book.url | prepend: site.baseurl }}">{{ book.title }}</a></h3>
+            {% include rating.html rating=book.rating %}
+          {% endif %}
         </div>
       </div>
     </li>
-    {% endunless %}
   {% endfor %}
 </ul>
