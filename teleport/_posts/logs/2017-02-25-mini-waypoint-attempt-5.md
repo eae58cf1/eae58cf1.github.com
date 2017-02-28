@@ -13,3 +13,4 @@ Lessons learned:
 - Always have a camera on the plane &mdash; or telemetry feeding back the GPS coordinates.
 - Don't fly in windy, rainy conditions unless you're a 747 jet.
 - Paint the plane a nice visible color, like red or bright orange
+- Add some sort of buzzer on the plane so you can track it down when it does eventually crash.
