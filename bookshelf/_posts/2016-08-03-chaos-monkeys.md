@@ -1,8 +1,6 @@
 ---
-layout: bookshelf-book
 title:  "Chaos Monkeys: Obscene fortune and random failure in silicon valley"
 date:   2016-08-03 18:43:33 +0300
-categories: bookshelf
 rating: 3
 link: https://www.amazon.com/Chaos-Monkeys-Obscene-Fortune-Failure-ebook/dp/B019MMUAAQ/
 cover: chaos-monkeys.jpg

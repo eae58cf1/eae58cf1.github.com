@@ -1,8 +1,6 @@
 ---
-layout: bookshelf-book
 title:  "Dyson: Against the Odds"
 date:   2016-10-30 6:43:33 +0300
-categories: bookshelf
 rating: 4
 link: https://amzn.com/1587990148
 cover: dyson-against-the-odds.jpg

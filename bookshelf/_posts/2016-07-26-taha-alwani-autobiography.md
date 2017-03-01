@@ -1,8 +1,6 @@
 ---
-layout: bookshelf-book
 title:  "Taha Alalwani (Autobiography) - Part 1"
 date:   2016-07-26 18:43:33 +0300
-categories: bookshelf
 rating:
 link:
 cover: nocover.jpg

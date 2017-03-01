@@ -1,16 +1,14 @@
 ---
-layout: bookshelf-book
-categories: bookshelf
 rating: 4
 link: http://a.co/984Gm80
 cover: how-to-fail-at-almost-everything-and-still-win-big.jpg
 ---
 
-## Lessons learned 
+## Lessons learned
 
 - Your health comes first, and it matters in everything else.
 - Focus on systems (habits) for achieving success, not goals. Systems deliver more consistent results, and provide positive reinforcement.
-- Having a combination of skills, as opposed to learning one skill to world-class mastery is an alternative approach that can deliver better results (if you're not inclined to do maniacal, repetitive practice) 
+- Having a combination of skills, as opposed to learning one skill to world-class mastery is an alternative approach that can deliver better results (if you're not inclined to do maniacal, repetitive practice)
 
 ## Notable notes
 
@@ -161,7 +159,7 @@ Fascinating perspective!
 
 > **Pessimism is often a failure of imagination**. If you can imagine the future being brighter, it lifts your energy and gooses the chemistry in your body that produces a sensation of happiness.
 
-I love this outlook &mdash; 
+I love this outlook &mdash;
 
 > The next important thing to remember about happiness is that it’s not a mystery of the mind and it’s not magic. Happiness is the natural state for most people whenever they feel healthy, have flexible schedules, and expect the future to be good.
 
@@ -191,4 +189,3 @@ Note: think nezar kadhem. fat means you experience less, theres imbalance
 > Here’s what I do when I know I should exercise but I feel too tired and droopy to imagine doing a vigorous workout. Instead of doing what I feel I can’t do, I do what I can do—which is put on my exercise clothes and lace my sneakers. (You might call them tennis shoes or running shoes where you live.) Central to my method is that I grant myself 100 percent permission to not exercise, even after getting suited up for
 
 > always remember that failure is your friend. It is the raw material of success. Invite it in. Learn from it. And don’t let it leave until you pick its pocket. That’s a system.
-

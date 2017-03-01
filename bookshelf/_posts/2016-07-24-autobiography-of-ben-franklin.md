@@ -1,8 +1,6 @@
 ---
-layout: bookshelf-book
 title:  "Benjamin Franklin Autobiography (Annotated)"
 date:   2016-07-24 18:43:33 +0300
-categories: bookshelf
 rating: 4
 link: https://www.amazon.com/Autobiography-Benjamin-Franklin-Thrift-Editions/dp/B004UJNXVK/
 cover: benjamin-franklin-autobiography.jpg

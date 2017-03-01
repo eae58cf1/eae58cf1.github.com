@@ -1,8 +1,6 @@
 ---
-layout: bookshelf-book
 title:  "The Dream Machine: J. C. R. Licklider and the Revolution That Made Computing Personal"
 date:   2016-09-10 6:43:33 +0300
-categories: bookshelf
 rating: 4
 link: https://amzn.com/B01FIPHEXM
 cover: the-dream-machine.jpg

@@ -1,8 +1,6 @@
 ---
-layout: bookshelf-book
 title:  "The Subtle Art of Not Giving a f&#42;ck: A Counterintuitive Approach to Living a Good Life"
 date:   2016-09-26 6:43:33 +0300
-categories: bookshelf
 rating: 4
 link: https://amzn.com/B019MMUA8S
 cover: the-subtle-art-of-not-giving-a-f.jpg

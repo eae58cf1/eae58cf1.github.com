@@ -1,8 +1,6 @@
 ---
-layout: bookshelf-book
 title:  "Dealers of Lightning: Xerox PARC and the Dawn of the Computer Age"
 date:   2016-07-12 6:43:33 +0300
-categories: bookshelf
 rating: 4
 link: https://amzn.com/B0029PBVCA
 cover: dealers-of-lightning.jpg

@@ -1,8 +1,6 @@
 ---
-layout: bookshelf-book
 title:  "A guide to the good life"
 date:   2016-08-16 18:43:33 +0300
-categories: bookshelf
 rating: 4
 link: https://amzn.com/B0040JHNQG
 cover: a-guide-to-the-good-life.jpg

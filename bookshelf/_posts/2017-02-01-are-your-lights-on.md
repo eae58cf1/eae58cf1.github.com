@@ -1,6 +1,4 @@
 ---
-layout: bookshelf-book
-categories: bookshelf
 rating: 2
 link: http://a.co/bII7fG6
 cover: are-your-lights-on.jpg
@@ -28,5 +26,3 @@ This is taken for granted (that the party or person affected by the problem) is 
 > If a person is in a position to do something about a problem, but doesn't have the problem, then do something so he does.
 
 Ah yes, the classic case where you have someone with the authority to fix a problem &mdash; but who just doesn't care because they're unaffected by it. Your job would be to make it visceral.
-
-

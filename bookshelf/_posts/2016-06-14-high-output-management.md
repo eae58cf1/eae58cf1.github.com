@@ -1,8 +1,6 @@
 ---
-layout: bookshelf-book
 title:  "High Output Management"
 date:   2016-06-14 6:43:33 +0300
-categories: bookshelf
 rating: 5
 link: https://amzn.com/B015VACHOK
 cover: high-output-management.jpg

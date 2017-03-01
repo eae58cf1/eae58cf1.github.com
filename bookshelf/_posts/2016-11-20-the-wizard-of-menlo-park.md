@@ -1,8 +1,6 @@
 ---
-layout: bookshelf-book
 title:  "Thomas Edison: The wizard of Menlo Park"
 date:   2016-11-20 6:43:33 +0300
-categories: bookshelf
 rating: 4
 link: http://a.co/gdzwgBw
 cover: the-wizard-of-menlo-park.jpg

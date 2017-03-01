@@ -1,8 +1,6 @@
 ---
-layout: bookshelf-book
 title:  "Debt - Updated and Expanded: The First 5,000 Years"
 date:   2016-09-22 6:43:33 +0300
-categories: bookshelf
 rating: 3
 link: https://amzn.com/B00Q1HZMCW
 cover: debt-the-first-5000-years.jpg

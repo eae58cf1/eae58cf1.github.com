@@ -1,8 +1,6 @@
 ---
-layout: bookshelf-book
 title:  "Be so good they can't ignore you"
 date:   2016-08-24 18:43:33 +0300
-categories: bookshelf
 rating: 2
 link: https://amzn.com/B0076DDBJ6
 cover: so-good-they-cant-ignore-you.jpg

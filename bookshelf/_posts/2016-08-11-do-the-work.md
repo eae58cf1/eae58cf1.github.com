@@ -1,8 +1,6 @@
 ---
-layout: bookshelf-book
 title:  "Do the Work"
 date:   2016-08-11 18:43:33 +0300
-categories: bookshelf
 rating: 3
 link: https://www.amazon.com/Do-Work-Steven-Pressfield-ebook/dp/B00NK0MJBK/
 cover: do-the-work.jpg

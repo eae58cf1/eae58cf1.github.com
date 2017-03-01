@@ -1,8 +1,6 @@
 ---
-layout: bookshelf-book
 title:  "Nikola Tesla: The man who invented the 20th century"
 date:   2016-11-20 6:43:33 +0300
-categories: bookshelf
 rating: 3
 link: http://a.co/4Vyz21l
 cover: the-man-who-invented-the-20th-century.jpg

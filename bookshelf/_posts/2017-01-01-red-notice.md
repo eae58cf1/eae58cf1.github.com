@@ -1,7 +1,5 @@
 ---
-layout: bookshelf-book
 title: "Red Notice: A True Story of High Finance, Murder, and One Man’s Fight for Justice"
-categories: bookshelf
 rating: 4
 link: http://a.co/1hjfIvJ
 cover: red-notice.jpg
@@ -22,7 +20,7 @@ Give yourself an advantage
 
 > The next morning I went through the phone directory and started cold-calling anyone who seemed relevant to see if they would be willing to discuss the Russian privatization program with me. I ended up seeing officials from the US embassy, some people at Ernst & Young, a junior Russian official at the privatization ministry, and a Stanford alum who worked at American Express, among others. Over four days, I arranged a total of thirty meetings, and from them I pieced together the full story of what was going on with the Russian privatization program.
 
-Amazing initiative! jump in there and talk to everyone that would listen 
+Amazing initiative! jump in there and talk to everyone that would listen
 
 > We had met on a flight to Moscow the previous spring and he told me to look him up if I ever set up my own fund.
 
@@ -30,7 +28,7 @@ Meet people always..
 
 > “I don’t know, but you and Safra seem to have lost interest.”
 
-Always have options..instead of waiting for a response from these 
+Always have options..instead of waiting for a response from these
 guys..he went out and tried closing deals wjth others.
 
 > This was typical billionaire psychology. If I hadn’t had a competing offer, Safra wouldn’t have done anything. But since another deal was on the table, Safra couldn’t resist.
@@ -52,4 +50,3 @@ This is how it's done. fake it then make it. patch supply and demand with tape. 
 Getting from helpless to this is shows phenomenal initiative, and an uwillingness to give up no matter what!
 
 > Since 2009, 13,195 bills had been proposed, and only 386 had made it out of committee and been voted in to law. We had completely defied the odds.
-

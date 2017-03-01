@@ -1,6 +1,4 @@
 ---
-layout: bookshelf-book
-categories: bookshelf
 title: "I invented the modern age: The rise of Henry Ford"
 rating: 4
 link: http://amzn.eu/agXGBdB
@@ -76,7 +74,7 @@ This attitude is clearly dubious, but seems to have worked on several occasions.
 
 > He began to go around Couzens on business matters, overruling him in minor ways without letting him know it was going to happen.
 
-The beginning of the decline of the Ford empire. 
+The beginning of the decline of the Ford empire.
 
 > By the midteens Ford has just one sales strategy, and that was to keep lowering the price of the car. Do that, he said, and the marketing would take care of itself.
 
@@ -97,5 +95,3 @@ Fascinating, values-driven tenacity on display by Ford!
 > He [Ford] held fast to the idea that an automobile was basic transportation. Alfred Sloan [of Chrysler] understood that it had grown up to become an object of desire as well
 
 This is what lead to the continued decline of Ford sales. Ford had stopped adapting or changing the Model T (since it had become so optimized that it was near perfect in production efficiency). However, people wanted personal cars &mdash; they wanted variety, something that the optimized process had no allowances for (nor did it's creator)
-
-

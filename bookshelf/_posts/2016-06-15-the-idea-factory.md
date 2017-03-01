@@ -1,8 +1,6 @@
 ---
-layout: bookshelf-book
 title:  "The Idea Factory: Bell Labs and the Great Age of American Innovation"
 date:   2016-06-15 6:43:33 +0300
-categories: bookshelf
 rating: 5
 link: https://amzn.com/B005GSZIWG
 cover: the-idea-factory.jpg

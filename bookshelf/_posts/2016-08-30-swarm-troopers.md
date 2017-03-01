@@ -1,8 +1,6 @@
 ---
-layout: bookshelf-book
 title:  "Swarm Troopers: How small drones will conquer the world"
 date:   2016-08-30 6:43:33 +0300
-categories: bookshelf
 rating: 3
 link: https://amzn.com/B017Q9GGVE
 cover: swarm-troopers.jpg
