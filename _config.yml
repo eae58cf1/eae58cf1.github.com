@@ -45,12 +45,6 @@ exclude:
 defaults:
   -
     scope:
-      path: "private"
-      type: "posts"
-    values:
-      published: false
-  -
-    scope:
       path: "bookshelf"
       type: "posts"
     values:
