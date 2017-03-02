@@ -21,3 +21,25 @@ I'm making quite a few changes from the previous models I've built to date &hell
 - Configure failsafe on the transmitter
 
 Again, I'll be following many of the best practices listed [here](http://beta.ivc.no/wiki/index.php/AXN_Clouds_Fly_Setup).
+
+## The Build
+Today, I spent most of the day setting up the Seriously Pro F3 board to work as the autopilot of choice for this flight. Thankfully, I was able to get the GPS working early on:
+
+![GPS working on SP F3](/assets/projects/teleport/inav-working-gps.png)
+
+I later started with the actual setup, including all the configuration for the RC, the calibration and everything else. I also painted it, though I ran out of spray paint after finishing the underbody:
+
+![Painted the plane body](/assets/projects/teleport/spray-painted-mini-body.png)
+
+I made the right side of the wing neon-green so I can tell which direction it's facing when it's in the air.
+
+**Update 2-Mar**: Today, I configured the INAV and it's all set for a test flight. I also added the video camera and transmitter, as well as setup the video ground station. 
+
+Pix below:
+
+![Mini FPV camera](/assets/projects/teleport/mini-fpv-camera.png)
+
+![Mini FPV screen](/assets/projects/teleport/mini-fpv-screen.png)
+
+
+Tomorrow, I'll take everything out for a spin &hellip; if it works well, will go ahead and run the waypoint flight.
