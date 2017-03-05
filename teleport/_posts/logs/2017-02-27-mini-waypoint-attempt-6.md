@@ -41,5 +41,33 @@ Pix below:
 
 ![Mini FPV screen](/assets/projects/teleport/mini-fpv-screen.png)
 
-
 Tomorrow, I'll take everything out for a spin &hellip; if it works well, will go ahead and run the waypoint flight.
+
+## Flight with F3
+
+Test flight did not go well, and I continually suffered with getting the F3 to ARM with the GPS in place. I finally relented and removed the GPS, since the initial flight was not going to be using the GPS modes anyway (I just wanted to get the thing trimmed and stable). When I threw it up in the air, I found that it wasn't stable at all (despite being in Stabilize mode). 
+
+I tried once more with similar results. I'm sure I probably could've got the damn thing to work with a bit more fiddling about but I felt like I'd wasted too much time switching between platforms and trying to re-learn them. Instead, I decided I'd just go back to either the APM or Pixhawk &mdash; let's hope we make quicker progress that way.
+
+## Pixhawk PX4 configuration
+
+Switched to Pixhawk. Had to setup with the following:
+
+- I was using an **analog** airspeed sensor connected to the ADC at the bottom right corner of the board. In order to get QGroundcontrol to recognize it, I had to [set the `SENS_DPRES_ANSC = 1000`](https://pixhawk.org/help/aspd).
+- In the end, the sensor was too heavy so I had to remove it (and [disable it](https://pixhawk.org/firmware/parameters#circuit_breaker) by setting `CBRK_AIRSPD_CHK = 162128`)
+
+Today I took it out for a test flight:
+
+![Pixhawk flight ready](/assets/projects/teleport/pixhawk-flight-attempt-1.png)
+
+![Pixhawk flight ready](/assets/projects/teleport/pixhawk-flight.png)
+
+I originally set it up in just Stabilize mode, and it flew really well despite 30km/h winds. Alas, I flew it too low and crashed into a tree breaking off half the right wing. Thankfully, it was nothing a bit of UHU Por couldn't handle. The bigger problem was getting the Pixhawk to stay in place &mdash; it's always challenging getting it to sit tight in a foam plane. I've tried double-sided tape but it comes loose after almost any crash &mdash; no matter how minor.
+
+Flight controllers (and the Pixhawk especially) are incredbily sensitive to axis turns. Finding a wayto mount it in a tight spot like the one I have in the AXN is an ongoing struggle &mdash; though it won't be as big an issue in the full-scale MTD.
+
+Having got these basic modes working, I proceeded to setup some [GPS-assisted modes](https://dev.px4.io/concept-flight-modes.html#flight-mode-quick-summary). I used Position (which essentially maintains the same heading and altitude at neutral input) and Loiter.
+
+I never did get a chance to try Loiter, but the Position flight worked like a charm. I had a few rough landings though in the high wind, and this meant the PX4 kept nudging about &mdash; until I eventually called it a day.
+
+Tomorrow, I'll attempt Waypoint flight on the Pixhawk.
