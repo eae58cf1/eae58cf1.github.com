@@ -71,3 +71,38 @@ Having got these basic modes working, I proceeded to setup some [GPS-assisted mo
 I never did get a chance to try Loiter, but the Position flight worked like a charm. I had a few rough landings though in the high wind, and this meant the PX4 kept nudging about &mdash; until I eventually called it a day.
 
 Tomorrow, I'll attempt Waypoint flight on the Pixhawk.
+
+## Test waypoint flight
+
+I configured the Pixhawk using Qgroundcontrol. I don't have an SD card handy, so I can't use the onboard logging capability on the Pixhawk (It'll be a few days before I get the one I ordered). Still, we're going ahead anyway and hope everything works as expected. I'd like to have Telemetry on the plane so I can see how it's progressing.
+
+
+I made a few mods before the flight:
+
+- I installed a balsa wood base below the Pixhawk to keep it stable. I just used UHU Por to glue it in place, with the battery underneath. I should still be able to charge the battery without removing it, since the balance connector lies above the board. I also added some aluminum foil to the base to protect from interference to the magentometer resulting from the power lines underneath. I attached the Pixhawk to the board using double sided foam tape, which would double as a vibration dampener.
+
+![Balsa wood base](/assets/projects/teleport/balsa-wood-base.png)
+
+- Noticed that the frame was broken from the underside, so my faithful tube of UHU Por was summoned once again &mdash; it didn't fail me.
+- I also followed every item on the pre-flight checklist, which was good because I found the magnetometer calibratoin to be off and the prop unbalanced.
+
+I tried setting up the waypoints for GPS flight but it turns out it needs the SD card too (which I don't have on hand). I ordered one off Amazon and should be getting it tomorrow.
+
+![Configured waypoints in QGroundcontrol](/assets/projects/teleport/configured-waypoints.png)
+
+![Waypoint attempt 6](/assets/projects/teleport/waypoint-6-attempt.png)
+
+I already had the plane ready, so I took it out for a spin to test the non-GPS flight modes again. It flew really well &mdash; and I was having so much fun that I forgot about the battery until I tried bringing the plane back from a field about 500m away. It seems to have run out of battery half-way through its journey, ultimately crashing on a side road.
+
+I picked up the pieces and brought it home &mdash; the 3S battery was at just 8.4V (that's 2.8V/cell)! The minimum voltage for a LiPo cell before you start getting irreversible damage is 3.2V/cell. I went straight home to recharge it.
+
+The battery is rated at 850mAh but it was so drained that it charged all the way up to 908mAh:
+
+![Waypoint attempt 6 - crash](/assets/projects/teleport/waypoint-6-crash.png)
+
+![Battery i'm using](/assets/projects/teleport/battery.png)
+
+![Battery charged at higher than rated!](/assets/projects/teleport/waypoint-battery-charged.png)
+
+I'll fix the plane now, in preparation for tomorrow's *real* GPS waypoint flight.
+
