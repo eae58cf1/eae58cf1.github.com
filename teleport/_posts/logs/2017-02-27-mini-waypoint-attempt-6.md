@@ -106,3 +106,6 @@ The battery is rated at 850mAh but it was so drained that it charged all the way
 
 I'll fix the plane now, in preparation for tomorrow's *real* GPS waypoint flight.
 
+**Update:** Attempted to launch this baby today (March 7) but the GPS wasn't working, and I still hadn't received the SD card. I ended up replacing the NEO-M8N with the previously working NEO-7M (this is the second GPS I've now replaced in a week, so our friends in China obviously seem to be having some serious quality issues). By the time I got the SD card and replaced everything out, it was dark. Will launch first thing tomorrow morning inshallah!
+
+
