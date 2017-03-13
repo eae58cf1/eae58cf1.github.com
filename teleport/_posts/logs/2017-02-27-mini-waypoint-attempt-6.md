@@ -108,4 +108,57 @@ I'll fix the plane now, in preparation for tomorrow's *real* GPS waypoint flight
 
 **Update:** Attempted to launch this baby today (March 7) but the GPS wasn't working, and I still hadn't received the SD card. I ended up replacing the NEO-M8N with the previously working NEO-7M (this is the second GPS I've now replaced in a week, so our friends in China obviously seem to be having some serious quality issues). By the time I got the SD card and replaced everything out, it was dark. Will launch first thing tomorrow morning inshallah!
 
+**Update2 :**
 
+Attempted to fly today early morning:
+
+![Early morning flight](/assets/projects/teleport/waypoint-6-early.png)
+
+It was super wet. I fired up the plane in AUTO made and threw it in the air. It was supposed to auto-start the motor and take off, but it did not. Looks like there's some special configuration I'll need to do to the Pixhawk to make it automatically take off. Instead, I decided I'd launch it in Stabilize mode, gain altitude and then switch to Auto mode. I was able to take off, and once I switched to AUTO the plane did change course towards the first waypoint. However, it struggled with the wind, and just kept lost altitude until eventually crashing into the ground.
+
+I went back to the workshop with the following changes in mind:
+- Setup auto takeoff.
+- Reorient the waypoints considering the wind direction. I should launch into the wind (i.e. upwind) and land upwind as well.
+- Secure the battery in place, since it seemed to have come off after the crash landing.
+
+Intent not to waste more time, I went right to it &mdash; finding out early on that there's a TAKEOFF waypoint type that I should be using instead of just the standard WAYPOINT. That takes care of the first item. When it came time to update the waypoints I noticed that I wasn't able to write the updated waypoints to the Pixhawk.
+
+After a lot of fumbling about, I realized that this worked well in Arduplane but not on the Pixhawk firmware:
+
+![Pixhawk firmware unresponsive](/assets/projects/teleport/pixhawk-config-issue.png)
+
+I switched to Arduplane and had to recalibrate everything, and setup the correct parameters. 
+
+These params are:
+- `TKOFF_THR_MINACC = 10` (m/s/s, acceleration for hand launched plane)
+- `TKOFF_THR_DELAY = 2` (s/10, delay before triggering motor in tenths of a second)
+- `TKOFF_THR_MINSPD = 3` (m/s, groundspeed before motor is engaged)
+- `TECS_PITCH_MAX = 25` (deg, this is the maximum pitch angle it'll use when climbing)
+
+I then checked the control surface directions, and had to reverse the RC channels for Aileron and Rudder.
+
+After updating the flight modes to Stabilize, Loiter and Auto (i'm using a 3 position switch on my transmitter for controlling flight mode), I was ready to update the waypoints, which I promptly did.
+
+Now, to fly.
+
+I went out, this time finally having made sure that it would work well. Everything was setup &hellip; I did a final check of all the control surfaces, and it worked great. I armed the motor and started increasing the throttle. Nothing. That's weird. Tried again, this time checking to make sure the throttle was OK. Still nothing. 
+
+Oh great.
+
+I did a few checks using the Tower app on my phone (connected to the bluetooth module that I connected to the Telemetry port on the Pixhawk). Everything was armed and OK. I took it back to the workshop and found the ESC to be faulty:
+
+![Faulty ESC](/assets/projects/teleport/faulty-esc.png)
+
+Oh great. I replaced it, and it was dark &mdash; now to wait patiently until the morning for the test flight.
+
+**Update 3**:
+
+![Attempt X](/assets/projects/teleport/waypoint-7.png)
+
+- Take off was perfect (right into the wind), and first 3 waypoints flew perfectly
+- The next few waypoints it struggled with, especially when it had to go against the wind. Eventually, the wind got faster than the plane itself and it started sliding backwards. 
+- After a few minutes, it crashed and lost. I know, i know. I had no FPV, no Telemetry and no GPS coordinates. I didn't even have a buzzer on it so I could locate it by ear.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QARcVOCR7tY" frameborder="0" allowfullscreen></iframe>
+
+While the plane did disappear, I consider the mission a partial success.

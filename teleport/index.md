@@ -23,15 +23,15 @@ layout: page
   - ❎ 2<sup>nd</sup> flight attempt: [Failed](/teleport/logs/build-the-plane-again)
   - ❎ 3<sup>rd</sup> flight attempt: [Failed](/teleport/logs/mini-flight-take-3)
   - ✅ 4<sup>th</sup> flight attempt: [Success!](/teleport/logs/mini-flight-take-4)
-- ➡️️ [Test autonomous waypoint flight with scaled-down plane](/teleport/logs/mini-waypoint-flight)
+- ✅ [Test autonomous waypoint flight with scaled-down plane](/teleport/logs/mini-waypoint-flight)
   - ❎ 1<sup>st</sup> flight attempt: [Failed](/teleport/logs/mini-waypoint-attempt-1)
   - ❎ 2<sup>nd</sup> flight attempt: [Failed](/teleport/logs/mini-waypoint-attempt-2)
   - ❎ 3<sup>rd</sup> flight attempt: [Failed](/teleport/logs/mini-waypoint-attempt-3)
   - ❎ 4<sup>th</sup> flight attempt: [Failed](/teleport/logs/mini-waypoint-attempt-4)
   - ❎ 5<sup>th</sup> flight attempt: [Failed](/teleport/logs/mini-waypoint-attempt-5)
-  - ➡️️ 6<sup>th</sup> flight attempt: [Ongoing](/teleport/logs/mini-waypoint-attempt-6)
+  - ✅ 6<sup>th</sup> flight attempt: [Success!](/teleport/logs/mini-waypoint-attempt-6)
 - ✅ Receive full-sized plane
-- [ ] Build the full-sized plane
+- ➡️️ Build the full-sized plane
 - [ ] Test autonomous flight with full-sized plane
 - [ ] Setup payload test (an orange)
 - [ ] Test flight with payload release
