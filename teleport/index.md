@@ -31,7 +31,7 @@ layout: page
   - ❎ 5<sup>th</sup> flight attempt: [Failed](/teleport/logs/mini-waypoint-attempt-5)
   - ✅ 6<sup>th</sup> flight attempt: [Success!](/teleport/logs/mini-waypoint-attempt-6)
 - ✅ Receive full-sized plane
-- ➡️️ Build the full-sized plane
+- ➡️️ [Build the full-sized plane](/teleport/logs/build-full-sized-plane)
 - [ ] Test autonomous flight with full-sized plane
 - [ ] Setup payload test (an orange)
 - [ ] Test flight with payload release
