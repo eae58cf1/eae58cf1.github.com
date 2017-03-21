@@ -32,4 +32,10 @@ I also finally received the other 40A ESC I was waiting for (I only had one), so
 
 I'll be working on the Lithium Ion battery pack once I receive the copper rod I've ordered in order to make my own spot welder. I tried to find one in the nearby university, but they didn't have one (strange!).
 
+**Update (March 20):**
 
+Today, I went ahead and calibrated all of the RC channels. I also centered all of the servos and got them setup properly. I attempted to connect the analog airspeed sensor that I had previously used on the Pixhawk (by connecting it to the ADC port). The Pixracer does [**not**](https://www.rcgroups.com/forums/showthread.php?2576614-Pixracer-Autopilot-the-new-PIXHAWK-generation-is-available/page149) support the Analog airspeed sensor, so I ordered a digital one instead.
+
+Other than that, I'm currently waiting on the Power Distribution Board with a built-in BEC that can output both 5V and 12V (I'll need the 12V for the LED strips on the planes wings so I can see it in the dark).
+
+I was hopeful I'll be able to get a used car battery so I can do the spot welding of the Lithium Ion battery pack, but I tried a few nearby places and turned out short. I'm now searching for alternative high current sources (600A+). If all else fails, I'll just solder the battery terminals directly (though I risk damaging the cells that way).
