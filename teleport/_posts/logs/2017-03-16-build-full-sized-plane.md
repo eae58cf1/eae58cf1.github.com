@@ -39,3 +39,20 @@ Today, I went ahead and calibrated all of the RC channels. I also centered all o
 Other than that, I'm currently waiting on the Power Distribution Board with a built-in BEC that can output both 5V and 12V (I'll need the 12V for the LED strips on the planes wings so I can see it in the dark).
 
 I was hopeful I'll be able to get a used car battery so I can do the spot welding of the Lithium Ion battery pack, but I tried a few nearby places and turned out short. I'm now searching for alternative high current sources (600A+). If all else fails, I'll just solder the battery terminals directly (though I risk damaging the cells that way).
+
+**Update (March 22):**
+
+Today I received the Power Distribution Module (with the built-in 5V/12V BEC) &mdash; that means I'm all set to get the plane ready for its maiden flight!
+
+Here's a run down of the things I've done today:
+- Added the landing gear. Wasn't going to do this at first, but this would be perfect for full autonomy &mdash; I can now set it up to takeoff on its own, without even me having to hand-launch it!
+- Calibrated the ESCs. To do this, I had to fashion a Y-cable that connects both motor control signals to a single servo lead that I plug into the flight controller. Tested, and it worked perfectly. Motors are now both in perfect sync.
+- Connected the Power Distribution Module to the ESCs and the flight controller. I'm using the Pixhawk power module (which has a built-in 5V BEC that I'm using solely for the flight controller). This feeds the current and voltage metered data to the flight controller for monitoring. All other electronics are being powered by the BEC on the power distribution module. 
+
+![Landing gear](/assets/projects/teleport/plane-landing-gear.png)
+
+![Internal wiring](/assets/projects/teleport/plane-internal-wiring.png)
+
+![Power Distribution Module](/assets/projects/teleport/plane-pdm.png)
+
+All that remains now is to connect the camera & on-screen display up &mdash; and put together the Li-Ion battery pack (this is going to be a massive 23,000mAh 4S pack that weighs over 1kg). Should keep it in the air for several hours.
