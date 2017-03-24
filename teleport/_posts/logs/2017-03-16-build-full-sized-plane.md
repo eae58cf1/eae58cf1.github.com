@@ -56,3 +56,24 @@ Here's a run down of the things I've done today:
 ![Power Distribution Module](/assets/projects/teleport/plane-pdm.png)
 
 All that remains now is to connect the camera & on-screen display up &mdash; and put together the Li-Ion battery pack (this is going to be a massive 23,000mAh 4S pack that weighs over 1kg). Should keep it in the air for several hours.
+
+**Update (March 23 & 24)**
+
+Today I:
+
+- Setup Bluetooth telemetry [using this excellent guide](http://diydrones.com/profiles/blogs/connecting-your-phone-tablet-or-laptop-to-apm-pixhawk-using-bluet).
+- Connected and installed the LEDs on the underside of the wings so that I can spot the plane in the dark. Right = green, Left = red. Nice and bright! They're being fed 12V from the power distribution board.
+
+I was **not** able to get the servo outputs of the Pixracer to work. I opened several support requests but to no avail. Looks like I just got a faulty Pixracer. The issue is that the servo outputs are supposed to reflect the RC inputs when the vehicle is ARMed and set to MANUAL mode. They don't. Even the MAVlink messages show the purported servo outputs correctly, but I just get 0 on the outputs. I hooked up an Arduino to Channel 1 of the servo outputs to verify, and confirmed the 0 reading.
+
+Expected servo output:
+
+![Expected servo output](/assets/projects/teleport/expected-servo-output.png)
+
+Actual servo output:
+
+![Actual servo output](/assets/projects/teleport/actual-servo-output.png)
+
+A whole lotta nothingness! Of course, without servo outputs the plane can't fly. That means I'll have to get the Pixracer replaced (and God knows how long that's going to take to happen). In the mean time, I'm going to have to fallback to whatever flight controller I have handy &mdash; which means the APM2.8. It's my last hope. Will have to replace all of the Pixracer connectors with the APM connectors and try again 😫
+
+
