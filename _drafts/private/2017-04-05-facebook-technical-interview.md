@@ -69,7 +69,7 @@ def reverse(head)
     prev = current
     current = next 
   end
-  current # the new head
+  prev # the new head
 end
 ```
 
