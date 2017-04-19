@@ -76,4 +76,4 @@ Actual servo output:
 
 A whole lotta nothingness! Of course, without servo outputs the plane can't fly. That means I'll have to get the Pixracer replaced (and God knows how long that's going to take to happen). In the mean time, I'm going to have to fallback to whatever flight controller I have handy &mdash; which means the APM2.8. It's my last hope. Will have to replace all of the Pixracer connectors with the APM connectors and try again 😫
 
-> Note: I realize I haven't posted an update in over 10 days, and there's a good reason for that. I'll be resuming posts from Thursday, promise! More details to come soon.
+> **Update (19 Apr):** I've been spending the past 2 weeks preparing for technical interviews at various companies. I'll have a more in-depth post on this in the near future, but for now I've had little time for anything else. I plan on resuming this project in the first week of May.
