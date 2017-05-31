@@ -14,3 +14,7 @@ First was pretty straightforward. I was speaking with a guy in Dubai over a tele
 The next was with Bruce Hazan, head of Solutions Engineering. This was more intense. He asked me a bunch of higher-level strategic questions around approaches I would take to solving customer problems. We talked about client case studies, etc. and it went well overall (though he did ask some questions specifically about Facbeook Ad solutions that I was unaware of &mdash; e.g. the Lead Ads thing). Finally, I did the tech demo of [my Ads bot](https://github.com/yazinsai/facebook-ads-bot) which was well received.
 
 That's it. I'll hear back Friday. Frankly, I don't think I'll make it through &mdash; we'll see.
+
+## Update:
+
+They called me to let me know that the second technical interview was the only roadblock in the way of extending an offer. They are going to repeat the interview this coming Friday, if I'm interested. They rarely ever do repeats, apparently &mdash; but they're willing to make an exception here. I agreed, so back to the study table.
