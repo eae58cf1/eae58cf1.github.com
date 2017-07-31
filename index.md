@@ -8,4 +8,5 @@ layout: default
 
 I'm a [Muslim](/islam) engineer, currently based just outside London.
 
-I'm currently working on [Teleport](/teleport) where I aim to create a simple UAV that can deliver humanitarian aid to hard-to-reach areas.
+Check out some of the [projects](/projects) that I've worked on in the past, and some things I'm doing now.
+
