@@ -38,4 +38,3 @@ layout: page
 - ➡️️  [Coordinate with aid agencies in Lebanon/Turkey](/teleport/logs/aid-agencies)
 - [ ] Fly there and test orange delivery!
 
-<script async id="_ck_195999" src="https://forms.convertkit.com/195999?v=6"></script>
