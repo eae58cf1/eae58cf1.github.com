@@ -8,5 +8,5 @@ layout: default
 
 I'm a [Muslim](/islam) engineer, currently based just outside London.
 
-Check out some of the [projects](/projects) that I've worked on in the past, and some things I'm doing now.
+Check out some of the [projects](/projects) that I've worked on in the past, and [some things I'm doing now](https://yazin.co/).
 
