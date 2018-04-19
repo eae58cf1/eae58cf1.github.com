@@ -6,7 +6,7 @@ layout: default
 ---
 # Hi, I'm Yazin
 
-I'm a [Muslim](/islam) engineer, currently based just outside London.
+I'm a [Muslim](/islam) engineer, currently residing in Bahrain.
 
 Check out some of the [projects](/projects) that I've worked on in the past, and [some things I'm doing now](https://yazin.co/).
 

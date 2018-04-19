@@ -11,6 +11,7 @@ ruby RUBY_VERSION
 # Happy Jekylling!
 gem "jekyll", "3.3.1"
 gem "redcarpet"
+gem "rake"
 
 # My custom theme
 gem "plain", :git => "https://github.com/yazinsai/jekyll-plain"
