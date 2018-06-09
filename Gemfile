@@ -14,7 +14,7 @@ gem "redcarpet"
 gem "rake"
 
 # My custom theme
-gem "plain", :git => "https://github.com/yazinsai/jekyll-plain"
+gem "plain", git: "https://github.com/yazinsai/jekyll-plain"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
