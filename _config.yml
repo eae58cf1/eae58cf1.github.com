@@ -33,7 +33,7 @@ future: true # publish future posts too..
 markdown: kramdown
 
 theme: plain # custom theme (see https://github.com/yazinsai/jekyll-plain)
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-last-modified-at

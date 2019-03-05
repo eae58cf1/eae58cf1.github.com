@@ -1,3 +1,6 @@
+---
+layout: post
+---
 I'm writing this on the plane back from Istanbul to Bahrain. I've got an excruciating ear infection of sorts that's driving me absolutely mad, ebbing between being slightly annoying and utterly unbearable.
 
 Thinking about how we set priorities, I can't help but reflect on how life is so self-centered, and how the needs of a person shift so suddenly from long to short-term thinking in the wake of an existential (or near existential) risk to their life.
