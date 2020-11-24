@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Masterplan</title>
+  <meta name="description" content="Muslim technology entrepeneur. Learn by doing.
+">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/perpetual/masterplan/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body>
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">Masterplan</h1>
+  
+
+  <p>My goal is to create a plane capable of perpetual flight.</p>
+
+<h2 id="challenges">Challenges</h2>
+
+<p>None I can foresee, since I know absolutely nothing about plane-building!</p>
+
+<p>So I’ve got a lot of things to learn. Thankfully though, we live in a day and age when many people on the planet (my lucky self included!) have access to the sum of human knowledge at our fingertips. This’ll make things easier. I’ll attempt to work on both the textbook (theoretical) and field (practical) fronts.</p>
+
+<h2 id="the-plan">The Plan</h2>
+
+<p>I’m breaking this down into 3 pieces that I will work on in parallel. These pieces all relate to their “power role” in the plane:</p>
+
+<ul>
+  <li>Consumption: The drive system — which consists of motor(s)</li>
+  <li>Storage: The batteries</li>
+  <li>Generation: These systems are responsible for generating power (that would be used for charging the batteries, and keeping the plane moving). Most likely going to be solar cells.</li>
+</ul>
+
+<p>Makes sense? You bet it does.</p>
+
+<p>Now, if we can find out how much power the plane will need to stay in the air, we can determine how much storage we’ll need to keep it up at night (when we can’t generate power). We’ll also need to know how much power we can actually generate during the day. If it’s not enough to cover the power consumption PLUS recharge the depleted batteries, then we’re not going to make it.</p>
+
+<p>Before getting lost in the details of each individual box, it’s worth highlighting an issue I noticed from the beginning. Take a look at the figure below, which shows the interaction between all the different design parameters we’ll need to pick:</p>
+
+<p><img src="/assets/projects/perpetual/masterplan-parameters.svg" title="Dependency illustrated" /></p>
+
+<p>You may have noticed a couple of circular references there. Here’s one:</p>
+
+<blockquote>
+  <p>Total Weight -&gt; Total Power -&gt; Battery capacity required -&gt; Battery Weight -&gt; Total Weight <em>(and so on …)</em></p>
+</blockquote>
+
+<p>Essentially, we need the total weight to find the total weight. <strong>Catch 22</strong></p>
+
+<p>The solution to this would be to simply plug some numbers in and play with them. You can use loops to simulate a range of meaningful values for power, weight, etc. and then see what combinations work.</p>
+
+<h2 id="the-goal">The Goal</h2>
+
+<p>Having briefly mentioned the different systems involved, it’s a good idea to state a clear goal for our plane. Ours is to use up as little power as possible. The less power we use (on the motor), the less we have to store (via batteries) and the less we have to genereate (via solar cells).</p>
+
+<p>So that’s the goal: reduce the power consumption on the plane. The bit that uses up the most power on our plane will undoubtedly be the motor.</p>
+
+<p>But why do we need a motor in the first place? To overcome drag. Not to keep the plane in the air (that’s what lift does), but to keep it moving forward (so it can generate the lift it needs to stay in the air).</p>
+
+<p>So let’s revisit that goal … in order to reduce the power required for the plane, we need to reduce the opposing drag. The lower the drag, the less work we need to do to overcome it.</p>
+
+<p>So that’s our specific goal then: to <strong>design a plane with the least possible drag</strong>.</p>
+
+<p>So here you go:</p>
+
+<p>. &lt;– This speck has super-low drag.</p>
+
+<p>Unfortunately, it doesn’t generate any useful lift either. See it turns out that you can’t really eliminate drag at all while also doing useful work. We need ot make sure that we’re not just reducing drag, but also that we’re able to generate enough lift to keep the plane in the air (and not fall).</p>
+
+<p>This means that our Lift must be greater than the Weight of the plane:</p>
+
+<script type="math/tex; mode=display">L \ge W</script>
+
+<p>We can’t generate any Lift without moving, and we need to overcome drag in order to start (and continue) moving. So that’s it. We need to figure out what the weight is, play around with various parameters in order to give us the minimum drag (while generating this minimum lift requirement) and then repeat.</p>
+
+<p>Our new goal becomes: <strong>design a plane that generates enough lift to support it’s weight, at the least possible drag</strong></p>
+
+<p>Of course, things get more complicated when you realize that everything changes during the flight (Lift, Drag, etc.) based on the airspeed, weather, angle of attack and a few other things.</p>
+
+<p><strong>Note:</strong> All of this was put together based on alot of reading from <a href="https://www.grc.nasa.gov/www/k-12/airplane/guided.htm">here</a>, <a href="http://mb-soft.com/public2/lift.html">here</a> and talking to a friend with a PhD in Aeronautics. If something’s wrong, <a href="mailto:hi@yaz.in">let me know</a>.</p>
+
+<h2 id="steps">Steps</h2>
+
+<p>Here’s an initial, high-level list:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Pick a suitable wing shape (airfoil) and size</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Find the drag at desired/expected operating conditions</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Pick a motor that can handle that drag, and then some</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Find required storage and generation parameters</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Simulate the plane before construction</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Build a scaled version and test it</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Get feedback, rinse and repeat</li>
+</ul>
+
+<p>Sounds simplistic, I know. But each of those check boxes is a project in its own right. Still we’re going to go through these one by one and strike them off.</p>
+
+<p>Also, this list will change a lot — I’ll be tracking progress of the project on the main <a href="/perpetual">Perpetual page</a>.</p>
+
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

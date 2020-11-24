@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mini Waypoint Attempt 6</title>
+  <meta name="description" content="New plane buildLuckily, I had a spare AXN on hand so I immediately got busy building it again (something I can now do in my sleep!). I decided to add in an F...">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/teleport/logs/mini-waypoint-attempt-6/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body>
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">Mini Waypoint Attempt 6</h1>
+  
+
+  <div class="meta"><span>March 14, 2017</span></div>
+<h2 id="new-plane-build">New plane build</h2>
+<p>Luckily, I had a spare AXN on hand so I immediately got busy building it again (something I can now do in my sleep!). I decided to add in an FPV (First Person View) camera gear on the plane so that I can see what’s going on at all times. I’m also going to be painting it bright colors, and adding a buzzer for an alarm.</p>
+
+<p>I still want to give the APM a chance, but something tells me that I’ll be better off moving to the Pixhawk PX4, or the <a href="http://seriouslypro.com/spracingf3">SP F3 controller</a>. I really want to get this tried and tested before my full-scale plane arrives (sometime early next week!).</p>
+
+<p>I need to move quickly, but with zero tolerance for mistakes — certainly not ones I’ve done before (and there are plenty by now).</p>
+
+<h2 id="changes-from-previous-models">Changes from previous models</h2>
+<p>I’m making quite a few changes from the previous models I’ve built to date … many prompted in an attempt to reduce the risk of the plane getting lost:</p>
+
+<ul>
+  <li>Adding camera gear for FPV flying</li>
+  <li>Painting it a really bright color (so I can see it in the sky)</li>
+  <li>Adding buzzer so I can find it when it crashes</li>
+  <li>Add telemetry so I can get plane information at my remote control</li>
+  <li>Swapped the AXN motor for the Turnigy 2730-1300 (I don’t have a spare AXN on hand)</li>
+  <li>Configure failsafe on the transmitter</li>
+</ul>
+
+<p>Again, I’ll be following many of the best practices listed <a href="http://beta.ivc.no/wiki/index.php/AXN_Clouds_Fly_Setup">here</a>.</p>
+
+<h2 id="the-build">The Build</h2>
+<p>Today, I spent most of the day setting up the Seriously Pro F3 board to work as the autopilot of choice for this flight. Thankfully, I was able to get the GPS working early on:</p>
+
+<p><img src="/assets/projects/teleport/inav-working-gps.png" alt="GPS working on SP F3" /></p>
+
+<p>I later started with the actual setup, including all the configuration for the RC, the calibration and everything else. I also painted it, though I ran out of spray paint after finishing the underbody:</p>
+
+<p><img src="/assets/projects/teleport/spray-painted-mini-body.png" alt="Painted the plane body" /></p>
+
+<p>I made the right side of the wing neon-green so I can tell which direction it’s facing when it’s in the air.</p>
+
+<p><strong>Update 2-Mar</strong>: Today, I configured the INAV and it’s all set for a test flight. I also added the video camera and transmitter, as well as setup the video ground station.</p>
+
+<p>Pix below:</p>
+
+<p><img src="/assets/projects/teleport/mini-fpv-camera.png" alt="Mini FPV camera" /></p>
+
+<p><img src="/assets/projects/teleport/mini-fpv-screen.png" alt="Mini FPV screen" /></p>
+
+<p>Tomorrow, I’ll take everything out for a spin … if it works well, will go ahead and run the waypoint flight.</p>
+
+<h2 id="flight-with-f3">Flight with F3</h2>
+
+<p>Test flight did not go well, and I continually suffered with getting the F3 to ARM with the GPS in place. I finally relented and removed the GPS, since the initial flight was not going to be using the GPS modes anyway (I just wanted to get the thing trimmed and stable). When I threw it up in the air, I found that it wasn’t stable at all (despite being in Stabilize mode).</p>
+
+<p>I tried once more with similar results. I’m sure I probably could’ve got the damn thing to work with a bit more fiddling about but I felt like I’d wasted too much time switching between platforms and trying to re-learn them. Instead, I decided I’d just go back to either the APM or Pixhawk — let’s hope we make quicker progress that way.</p>
+
+<h2 id="pixhawk-px4-configuration">Pixhawk PX4 configuration</h2>
+
+<p>Switched to Pixhawk. Had to setup with the following:</p>
+
+<ul>
+  <li>I was using an <strong>analog</strong> airspeed sensor connected to the ADC at the bottom right corner of the board. In order to get QGroundcontrol to recognize it, I had to <a href="https://pixhawk.org/help/aspd">set the <code class="highlighter-rouge">SENS_DPRES_ANSC = 1000</code></a>.</li>
+  <li>In the end, the sensor was too heavy so I had to remove it (and <a href="https://pixhawk.org/firmware/parameters#circuit_breaker">disable it</a> by setting <code class="highlighter-rouge">CBRK_AIRSPD_CHK = 162128</code>)</li>
+</ul>
+
+<p>Today I took it out for a test flight:</p>
+
+<p><img src="/assets/projects/teleport/pixhawk-flight-attempt-1.png" alt="Pixhawk flight ready" /></p>
+
+<p><img src="/assets/projects/teleport/pixhawk-flight.png" alt="Pixhawk flight ready" /></p>
+
+<p>I originally set it up in just Stabilize mode, and it flew really well despite 30km/h winds. Alas, I flew it too low and crashed into a tree breaking off half the right wing. Thankfully, it was nothing a bit of UHU Por couldn’t handle. The bigger problem was getting the Pixhawk to stay in place — it’s always challenging getting it to sit tight in a foam plane. I’ve tried double-sided tape but it comes loose after almost any crash — no matter how minor.</p>
+
+<p>Flight controllers (and the Pixhawk especially) are incredbily sensitive to axis turns. Finding a wayto mount it in a tight spot like the one I have in the AXN is an ongoing struggle — though it won’t be as big an issue in the full-scale MTD.</p>
+
+<p>Having got these basic modes working, I proceeded to setup some <a href="https://dev.px4.io/concept-flight-modes.html#flight-mode-quick-summary">GPS-assisted modes</a>. I used Position (which essentially maintains the same heading and altitude at neutral input) and Loiter.</p>
+
+<p>I never did get a chance to try Loiter, but the Position flight worked like a charm. I had a few rough landings though in the high wind, and this meant the PX4 kept nudging about — until I eventually called it a day.</p>
+
+<p>Tomorrow, I’ll attempt Waypoint flight on the Pixhawk.</p>
+
+<h2 id="test-waypoint-flight">Test waypoint flight</h2>
+
+<p>I configured the Pixhawk using Qgroundcontrol. I don’t have an SD card handy, so I can’t use the onboard logging capability on the Pixhawk (It’ll be a few days before I get the one I ordered). Still, we’re going ahead anyway and hope everything works as expected. I’d like to have Telemetry on the plane so I can see how it’s progressing.</p>
+
+<p>I made a few mods before the flight:</p>
+
+<ul>
+  <li>I installed a balsa wood base below the Pixhawk to keep it stable. I just used UHU Por to glue it in place, with the battery underneath. I should still be able to charge the battery without removing it, since the balance connector lies above the board. I also added some aluminum foil to the base to protect from interference to the magentometer resulting from the power lines underneath. I attached the Pixhawk to the board using double sided foam tape, which would double as a vibration dampener.</li>
+</ul>
+
+<p><img src="/assets/projects/teleport/balsa-wood-base.png" alt="Balsa wood base" /></p>
+
+<ul>
+  <li>Noticed that the frame was broken from the underside, so my faithful tube of UHU Por was summoned once again — it didn’t fail me.</li>
+  <li>I also followed every item on the pre-flight checklist, which was good because I found the magnetometer calibratoin to be off and the prop unbalanced.</li>
+</ul>
+
+<p>I tried setting up the waypoints for GPS flight but it turns out it needs the SD card too (which I don’t have on hand). I ordered one off Amazon and should be getting it tomorrow.</p>
+
+<p><img src="/assets/projects/teleport/configured-waypoints.png" alt="Configured waypoints in QGroundcontrol" /></p>
+
+<p><img src="/assets/projects/teleport/waypoint-6-attempt.png" alt="Waypoint attempt 6" /></p>
+
+<p>I already had the plane ready, so I took it out for a spin to test the non-GPS flight modes again. It flew really well — and I was having so much fun that I forgot about the battery until I tried bringing the plane back from a field about 500m away. It seems to have run out of battery half-way through its journey, ultimately crashing on a side road.</p>
+
+<p>I picked up the pieces and brought it home — the 3S battery was at just 8.4V (that’s 2.8V/cell)! The minimum voltage for a LiPo cell before you start getting irreversible damage is 3.2V/cell. I went straight home to recharge it.</p>
+
+<p>The battery is rated at 850mAh but it was so drained that it charged all the way up to 908mAh:</p>
+
+<p><img src="/assets/projects/teleport/waypoint-6-crash.png" alt="Waypoint attempt 6 - crash" /></p>
+
+<p><img src="/assets/projects/teleport/battery.png" alt="Battery i'm using" /></p>
+
+<p><img src="/assets/projects/teleport/waypoint-battery-charged.png" alt="Battery charged at higher than rated!" /></p>
+
+<p>I’ll fix the plane now, in preparation for tomorrow’s <em>real</em> GPS waypoint flight.</p>
+
+<p><strong>Update:</strong> Attempted to launch this baby today (March 7) but the GPS wasn’t working, and I still hadn’t received the SD card. I ended up replacing the NEO-M8N with the previously working NEO-7M (this is the second GPS I’ve now replaced in a week, so our friends in China obviously seem to be having some serious quality issues). By the time I got the SD card and replaced everything out, it was dark. Will launch first thing tomorrow morning inshallah!</p>
+
+<p><strong>Update2 :</strong></p>
+
+<p>Attempted to fly today early morning:</p>
+
+<p><img src="/assets/projects/teleport/waypoint-6-early.png" alt="Early morning flight" /></p>
+
+<p>It was super wet. I fired up the plane in AUTO made and threw it in the air. It was supposed to auto-start the motor and take off, but it did not. Looks like there’s some special configuration I’ll need to do to the Pixhawk to make it automatically take off. Instead, I decided I’d launch it in Stabilize mode, gain altitude and then switch to Auto mode. I was able to take off, and once I switched to AUTO the plane did change course towards the first waypoint. However, it struggled with the wind, and just kept lost altitude until eventually crashing into the ground.</p>
+
+<p>I went back to the workshop with the following changes in mind:</p>
+<ul>
+  <li>Setup auto takeoff.</li>
+  <li>Reorient the waypoints considering the wind direction. I should launch into the wind (i.e. upwind) and land upwind as well.</li>
+  <li>Secure the battery in place, since it seemed to have come off after the crash landing.</li>
+</ul>
+
+<p>Intent not to waste more time, I went right to it — finding out early on that there’s a TAKEOFF waypoint type that I should be using instead of just the standard WAYPOINT. That takes care of the first item. When it came time to update the waypoints I noticed that I wasn’t able to write the updated waypoints to the Pixhawk.</p>
+
+<p>After a lot of fumbling about, I realized that this worked well in Arduplane but not on the Pixhawk firmware:</p>
+
+<p><img src="/assets/projects/teleport/pixhawk-config-issue.png" alt="Pixhawk firmware unresponsive" /></p>
+
+<p>I switched to Arduplane and had to recalibrate everything, and setup the correct parameters.</p>
+
+<p>These params are:</p>
+<ul>
+  <li><code class="highlighter-rouge">TKOFF_THR_MINACC = 10</code> (m/s/s, acceleration for hand launched plane)</li>
+  <li><code class="highlighter-rouge">TKOFF_THR_DELAY = 2</code> (s/10, delay before triggering motor in tenths of a second)</li>
+  <li><code class="highlighter-rouge">TKOFF_THR_MINSPD = 3</code> (m/s, groundspeed before motor is engaged)</li>
+  <li><code class="highlighter-rouge">TECS_PITCH_MAX = 25</code> (deg, this is the maximum pitch angle it’ll use when climbing)</li>
+</ul>
+
+<p>I then checked the control surface directions, and had to reverse the RC channels for Aileron and Rudder.</p>
+
+<p>After updating the flight modes to Stabilize, Loiter and Auto (i’m using a 3 position switch on my transmitter for controlling flight mode), I was ready to update the waypoints, which I promptly did.</p>
+
+<p>Now, to fly.</p>
+
+<p>I went out, this time finally having made sure that it would work well. Everything was setup … I did a final check of all the control surfaces, and it worked great. I armed the motor and started increasing the throttle. Nothing. That’s weird. Tried again, this time checking to make sure the throttle was OK. Still nothing.</p>
+
+<p>Oh great.</p>
+
+<p>I did a few checks using the Tower app on my phone (connected to the bluetooth module that I connected to the Telemetry port on the Pixhawk). Everything was armed and OK. I took it back to the workshop and found the ESC to be faulty:</p>
+
+<p><img src="/assets/projects/teleport/faulty-esc.png" alt="Faulty ESC" /></p>
+
+<p>Oh great. I replaced it, and it was dark — now to wait patiently until the morning for the test flight.</p>
+
+<p><strong>Update 3</strong>:</p>
+
+<p><img src="/assets/projects/teleport/waypoint-7.png" alt="Attempt X" /></p>
+
+<ul>
+  <li>Take off was perfect (right into the wind), and first 3 waypoints flew perfectly</li>
+  <li>The next few waypoints it struggled with, especially when it had to go against the wind. Eventually, the wind got faster than the plane itself and it started sliding backwards.</li>
+  <li>After a few minutes, it crashed and lost. I know, i know. I had no FPV, no Telemetry and no GPS coordinates. I didn’t even have a buzzer on it so I could locate it by ear.</li>
+</ul>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QARcVOCR7tY" frameborder="0" allowfullscreen=""></iframe>
+
+<p>While the plane did disappear, I consider the mission a partial success.</p>
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

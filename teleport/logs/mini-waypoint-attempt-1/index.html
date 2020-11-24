@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mini Waypoint Attempt 1</title>
+  <meta name="description" content="I had a really hard time getting the plane to stay up — it was very unstable, often rolling side-to-side with application of throttle. It was windy, but that...">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/teleport/logs/mini-waypoint-attempt-1/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body>
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">Mini Waypoint Attempt 1</h1>
+  
+
+  <div class="meta"><span>February 26, 2017</span></div>
+<p>I had a really hard time getting the plane to stay up — it was very unstable, often rolling side-to-side with application of throttle. It was windy, but that couldn’t possibly account for all this instability.</p>
+
+<p>I had a closer look and found that the motor mount was tilted to the left ever so slightly. This meant that there was more air being thrust back towards the right side of the vertical stabilizer, relative to the left side. I took the plane back and did a dry test — where I would place the plane on a flat surface and monitor the yaw angle. Essentially, you want to get it to the point where it’s not yawing when you apply throttle.</p>
+
+<p>I made the modifications to the motor mount and confirmed the finding. I also updated the <a href="/teleport/resources/preflight-checklist">pre-flight checklist</a> to include this dry-run test of the control surfaces.</p>
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

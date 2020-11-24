@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Build the plane again</title>
+  <meta name="description" content="After the first failed attempt, I was able to retrieve the plane from the tree (using a rope and a bag of sand to pull the branch down):">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/teleport/logs/build-the-plane-again/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body>
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">Build the plane again</h1>
+  
+
+  <div class="meta"><span>February 11, 2017</span></div>
+<p>After the <a href="/teleport/logs/build-the-plane">first failed attempt</a>, I was able to retrieve the plane from the tree (using a rope and a bag of sand to pull the branch down):</p>
+
+<p><img src="/assets/projects/teleport/axn-after-crash.png" alt="Plane retrieved from crash site" /></p>
+
+<p>The plane body was mostly in tact, so I’ll be using the same frame. I’ll be making the changes we discussed after the last attempt, namely:</p>
+<ul>
+  <li>✅ Increase propeller size to 6 inches (from 5 inches previously)</li>
+  <li>✅ Reduce weight of the plane by using a smaller battery pack</li>
+  <li>✅ Use autopilot from the get-go. No manual flying</li>
+</ul>
+
+<p>Also, some minor things to remember to do (based on the state of the retrieved plane):</p>
+<ul>
+  <li>✅ Make sure that the ESC is configured with a voltage cut-off. The motor was running even after the plane crashed into the tree, and continued to run until the 3-cell LiPo battery I was using was drained to 1.2V across all 3 cells! Luckily, I was able to <a href="https://www.rcgroups.com/forums/showthread.php?1072324-(HOW-TO)-Recovering-over-discharged-lipos">charge it back</a>. I got this done, after finding <a href="https://www.youtube.com/watch?v=E6epG5E8gAQ">this gem of a video</a> that showed the calibration process, with complete list of options <a href="https://dronebuildersblog.wordpress.com/2016/01/10/emax-blheli-brushless-esc-programming/#ep">here</a>.</li>
+  <li>✅ Put lock-tight on the bullet prop adapter to prevent it from flying off. I lost mine somewhere in the woods.</li>
+  <li>✅ Properly secure the servos inside the fuselage (for elevator and rudder). Noticed that these were loose when inspecting the plane post-crash.</li>
+</ul>
+
+<p>Onwards…</p>
+
+<h2 id="the-lithium-ion-battery-pack">The Lithium Ion battery pack</h2>
+<p>I’m creating a custom battery pack with a higher energy density than the Lithium Polymer batteries I previously used. This battery pack would pack more punch, at a lower weight (almost half). Take a look:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">LiPoly battery</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Capacity</td>
+      <td>2.2Ah * 3S = 2.2Ah * 3 * 3.7 = 24.42 Wh</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Weight</td>
+      <td>190 g</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Energy Density</td>
+      <td>Capacity / Weight = 128 Wh/kg</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">LiIon</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Capacity</td>
+      <td>3.4 Ah * 3S = 3.4Ah * 3 * 3.7 = 37.74 Wh</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Weight</td>
+      <td>138 g</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Energy Density</td>
+      <td>273 Wh/kg</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>There you go … our LiIon pack has <strong>2.13X more energy density</strong> than the previous LiPo pack! The only downside to consider is that the discharge rating for LiIon is only ~2C (vs. ~30C for LiPo). This basically puts a limit on how fast you can discharge the cell, but if you wire these cells in parallel you can get more than enough current output for a simple glider.</p>
+
+<p>I used 3.7V in both cases, but that’s only true in average. Lipo batteries typically have a range from 3.2V - 4.2V / cell, with the average being 3.7V. Li-Ion batteries operate in a more stable 3.7V and then degrades quickly after that. You can see the Li-Ion discharge curve below:</p>
+
+<p><img src="/assets/projects/teleport/li-ion-discharge-curve.jpg" alt="Lithium Ion discharge curve" /></p>
+
+<p>For this example, I’ll be using just one cell, so I’ll need to monitor the power output and replace the cell with the LiPo if it’s insufficient.</p>
+
+<p>I’ve gone ahead and built the cell, include an XT-60 connector and a balance connector for charging:</p>
+
+<p><img src="/assets/projects/teleport/custom-lipo-cell.jpg" alt="Custom built LiPo pack" /></p>
+
+<p>I then did a power draw comparison between LiPo:
+<img src="/assets/projects/teleport/power-check-lipo.jpg" alt="LiPo power draw" /></p>
+
+<p>… and Li Ion:
+<img src="/assets/projects/teleport/power-check-liion.jpg" alt="Li Ion power draw" /></p>
+
+<p>The difference in current draw isn’t huge (I = 2.1A for Lipo vs. 1.8A for Li-ion) so I’ll just use the Li-Ion pack I made.</p>
+
+<h2 id="the-autopilot">The Autopilot</h2>
+<p>I ordered the <a href="http://seriouslypro.com/spracingf3">Seriously Pro F3</a> flight controller as a replacement for the bulky APM that I was previously using. I received that the next day (today) and spent a few solid hours going through the setup.</p>
+
+<p>I had to solder the header pins in place and then start with the configuration of the board itself. The biggest time sink was getting the GPS unit to talk with the F3. I was using a Ublox NEO-6M (that was supposed to be supported by the F3) but it just wasn’t flashing blue like it should. I’ll try and wrap all those things up today and take it out for a test flight.</p>
+
+<p>The only problem is that I lost the prop adapter collet that held the propeller in place after the crash — I ordered a replacement but that’s going to take a week to arrive. I’ll figure something out</p>
+
+<p><img src="/assets/projects/teleport/inav-not-working-gps.png" alt="INAV GPS Not working" /></p>
+
+<p><strong>UPDATE</strong>: Spent the whole day trying to get the GPS to play nice with the autopilot and it did not work — which is strange since I was able to get it work for a brief minute before the whole thing just stopped working. Still, I won’t waste more time on getting it to work — I’ve ordered the newer <a href="https://www.u-blox.com/en/product/neo-m8-series">Ublox NEO-8MN</a> that they recommend and expect to get that in a few weeks. For now, I’ll just fall back to the APM for further testing.</p>
+
+<h2 id="finishing-touches">Finishing touches</h2>
+<p>I’ve put everything together again, and now we’re ready for the test flight:
+<img src="/assets/projects/teleport/axn-take-2.jpg" alt="AXN - Take 2" /></p>
+
+<p>Unfortunately, it was insanely windy today (9th Feb) so I couldn’t take it out for a spin. I’ll plan to do that first thing tomorrow.</p>
+
+<h2 id="flight-2">Flight #2</h2>
+<p>Today I went out to fly the plane.</p>
+
+<p><img src="/assets/projects/teleport/axn-take-2-ready.jpg" alt="Plane ready to roll" /></p>
+
+<p><strong>First attempt</strong>:</p>
+<ul>
+  <li>I noticed that the ESC would continue beeping as soon as I plugged in the power. Once I moved the Throttle stick up, it would start the calibration procedure (which I didn’t want). Turns out this behavior happened because it was receiving a high initial PWM value (&gt;850) from the APM. I used my servo tester to provide an 800 value and then switched it back to the APM and it worked.</li>
+</ul>
+
+<blockquote>
+  <p>Lesson: The calibration of the ESC seems off — get it fixed, or replace the cheap ESC with a more reliable one.</p>
+</blockquote>
+
+<ul>
+  <li>After taking off, I noticed that it wouldn’t bank left (when I applied left aileron). It could only turn right. Eventually, I brought it back down and checked the controls — they worked fine when the plane wasn’t moving. Strange.</li>
+  <li>I tried launching again. Same thing, but this time it didn’t have such a light crash (the wings separated, though nothing broke). Upon closer inspection, I was shocked to find that I’d had the plane in Loiter mode … not Stabilize. What a stupid mistake! This is something I should’ve checked from the get-go.</li>
+</ul>
+
+<blockquote>
+  <p>Lesson: Have a pre-flight checklist which includes things like checking the Flight mode in addition to the other tests I now do informally (e.g. control surfaces, center of gravity, etc.)</p>
+</blockquote>
+
+<p><strong>Second attempt</strong>:</p>
+<ul>
+  <li>I put the plane back together (though it wasn’t all that neat) and tried to fly it again. This time it took off, but I had to apply ALOT of up elevator just to keep it from nose-diving. This seemed familiar, and I was almost certain it was a center of gravity issue (something I hadn’t re-checked after the first crash). Flight didn’t last long before it crashed again. I checked and the battery was loose — I’d originally kept it in place by keeping it right between the foam edges at the nose of the plane, but it got dislodged after the first crash.</li>
+</ul>
+
+<blockquote>
+  <p>Lesson: Secure the battery pack in place</p>
+</blockquote>
+
+<p>In the end, the plane was in no shape to be flown again with any meaningful outcome. The wings had become dislodged, the CoG was random at best (because of the shifting battery pack) and the nose was rather crumpled. I decided to go back, fix it and try again tomorrow.</p>
+
+<h2 id="todo">Todo</h2>
+<p>Here’s what I’ll need to do ahead of the next flight:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Secure battery in place</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Re-attach wings</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Fix nose</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Fix/Replace ESC</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Pre-flight checklist</li>
+</ul>
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

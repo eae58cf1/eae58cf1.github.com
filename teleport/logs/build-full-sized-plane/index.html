@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Build Full Sized Plane</title>
+  <meta name="description" content="I’ve started work on building the full-sized MyTwinDream that I received last week. This plane is HUGE and I can easily see how it can carry several kilogram...">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/teleport/logs/build-full-sized-plane/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body>
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">Build Full Sized Plane</h1>
+  
+
+  <div class="meta"><span>April 20, 2017</span></div>
+<p>I’ve started work on building the full-sized MyTwinDream that I received last week. This plane is HUGE and I can easily see how it can carry several kilograms of payload for delivery, in addition to the loads of batteries it’ll need to go long range.</p>
+
+<p>Since I <a href="/teleport/logs/mini-waypoint-attempt-6/">no longer have the Pixhawk</a>, I’ll be using a Pixracer (a newer, smaller version of the original Pixhawk). I’ll also be using a custom battery pack made from the LiIon cells I’d developed previously (but were too heavy to include in the smaller AXN).</p>
+
+<ul>
+  <li>Installed and centered all of the control surfaces</li>
+  <li>Installed the airspeed sensor</li>
+  <li>Got the GPS working</li>
+</ul>
+
+<p><img src="/assets/projects/teleport/fullsize-gps-working.png" alt="GPS working" /></p>
+
+<p><strong>Update (March 17):</strong></p>
+
+<ul>
+  <li>Connected control surfaces to flight controller</li>
+  <li>Installed the radio receiver</li>
+</ul>
+
+<p>It’s worth noting that this is a fairly large plane — definitely the largest I’ve built to date. I’ve also got huge 11 inch propellers installed on the dual motors, so we’re talking about huge amounts of thrust!</p>
+
+<p>Here are some progress pics:</p>
+
+<p><img src="/assets/projects/teleport/cables-inside-hull.png" alt="Cables everywhere" /></p>
+
+<p><img src="/assets/projects/teleport/motor-mount.png" alt="Motor mount" /></p>
+
+<p><img src="/assets/projects/teleport/plane-not-complete.png" alt="Plane in progress" /></p>
+
+<p>I also finally received the other 40A ESC I was waiting for (I only had one), so now I can test the whole plane.</p>
+
+<p>I’ll be working on the Lithium Ion battery pack once I receive the copper rod I’ve ordered in order to make my own spot welder. I tried to find one in the nearby university, but they didn’t have one (strange!).</p>
+
+<p><strong>Update (March 20):</strong></p>
+
+<p>Today, I went ahead and calibrated all of the RC channels. I also centered all of the servos and got them setup properly. I attempted to connect the analog airspeed sensor that I had previously used on the Pixhawk (by connecting it to the ADC port). The Pixracer does <a href="https://www.rcgroups.com/forums/showthread.php?2576614-Pixracer-Autopilot-the-new-PIXHAWK-generation-is-available/page149"><strong>not</strong></a> support the Analog airspeed sensor, so I ordered a digital one instead.</p>
+
+<p>Other than that, I’m currently waiting on the Power Distribution Board with a built-in BEC that can output both 5V and 12V (I’ll need the 12V for the LED strips on the planes wings so I can see it in the dark).</p>
+
+<p>I was hopeful I’ll be able to get a used car battery so I can do the spot welding of the Lithium Ion battery pack, but I tried a few nearby places and turned out short. I’m now searching for alternative high current sources (600A+). If all else fails, I’ll just solder the battery terminals directly (though I risk damaging the cells that way).</p>
+
+<p><strong>Update (March 22):</strong></p>
+
+<p>Today I received the Power Distribution Module (with the built-in 5V/12V BEC) — that means I’m all set to get the plane ready for its maiden flight!</p>
+
+<p>Here’s a run down of the things I’ve done today:</p>
+<ul>
+  <li>Added the landing gear. Wasn’t going to do this at first, but this would be perfect for full autonomy — I can now set it up to takeoff on its own, without even me having to hand-launch it!</li>
+  <li>Calibrated the ESCs. To do this, I had to fashion a Y-cable that connects both motor control signals to a single servo lead that I plug into the flight controller. Tested, and it worked perfectly. Motors are now both in perfect sync.</li>
+  <li>Connected the Power Distribution Module to the ESCs and the flight controller. I’m using the Pixhawk power module (which has a built-in 5V BEC that I’m using solely for the flight controller). This feeds the current and voltage metered data to the flight controller for monitoring. All other electronics are being powered by the BEC on the power distribution module.</li>
+</ul>
+
+<p><img src="/assets/projects/teleport/plane-landing-gear.png" alt="Landing gear" /></p>
+
+<p><img src="/assets/projects/teleport/plane-internal-wiring.png" alt="Internal wiring" /></p>
+
+<p><img src="/assets/projects/teleport/plane-pdm.png" alt="Power Distribution Module" /></p>
+
+<p>All that remains now is to connect the camera &amp; on-screen display up — and put together the Li-Ion battery pack (this is going to be a massive 23,000mAh 4S pack that weighs over 1kg). Should keep it in the air for several hours.</p>
+
+<p><strong>Update (March 23 &amp; 24)</strong></p>
+
+<p>Today I:</p>
+
+<ul>
+  <li>Setup Bluetooth telemetry <a href="http://diydrones.com/profiles/blogs/connecting-your-phone-tablet-or-laptop-to-apm-pixhawk-using-bluet">using this excellent guide</a>.</li>
+  <li>Connected and installed the LEDs on the underside of the wings so that I can spot the plane in the dark. Right = green, Left = red. Nice and bright! They’re being fed 12V from the power distribution board.</li>
+</ul>
+
+<p>I was <strong>not</strong> able to get the servo outputs of the Pixracer to work. I opened several support requests but to no avail. Looks like I just got a faulty Pixracer. The issue is that the servo outputs are supposed to reflect the RC inputs when the vehicle is ARMed and set to MANUAL mode. They don’t. Even the MAVlink messages show the purported servo outputs correctly, but I just get 0 on the outputs. I hooked up an Arduino to Channel 1 of the servo outputs to verify, and confirmed the 0 reading.</p>
+
+<p>Expected servo output:</p>
+
+<p><img src="/assets/projects/teleport/expected-servo-output.png" alt="Expected servo output" /></p>
+
+<p>Actual servo output:</p>
+
+<p><img src="/assets/projects/teleport/actual-servo-output.png" alt="Actual servo output" /></p>
+
+<p>A whole lotta nothingness! Of course, without servo outputs the plane can’t fly. That means I’ll have to get the Pixracer replaced (and God knows how long that’s going to take to happen). In the mean time, I’m going to have to fallback to whatever flight controller I have handy — which means the APM2.8. It’s my last hope. Will have to replace all of the Pixracer connectors with the APM connectors and try again 😫</p>
+
+<blockquote>
+  <p><strong>Update (19 Apr):</strong> I’ve been spending the past 2 weeks preparing for technical interviews at various companies. I’ll have a more in-depth post on this in the near future, but for now I’ve had little time for anything else. I plan on resuming this project in the first week of May.</p>
+</blockquote>
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

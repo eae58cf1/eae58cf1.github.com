@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Tracking every minute</title>
+  <meta name="description" content="The title says it all. I got the idea from a friend who's been doing this thing [for years](http://david.achkar.com/life-log/) and thought I'd try it out for...">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/experiments/tracking-every-minute/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body>
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">Tracking every minute</h1>
+  
+
+  <div class="meta"><span>December 21, 2016</span></div>
+<h2 id="the-experiment">The experiment</h2>
+<p>Have you ever looked back at the end of a long day and thought: my God, that day just flew by! I can’t even remember where all the time went. Or perhaps you’ve caught yourself wondering, at the end of a not particularly productive year, how it feels like the year just started yesterday.</p>
+
+<p>Well, I have. So to know where all this time is going, I’m going to be tracking every minute of very day for a full month.</p>
+
+<h2 id="rules">Rules</h2>
+
+<ul>
+  <li>Track <em>everything</em> that’s over 15 minutes long. (The reason I do this is to maintain sanity — no point tracking anything less than that because it just becomes a distraction).</li>
+</ul>
+
+<h2 id="setup">Setup</h2>
+
+<p>My friend David (who’s <a href="http://david.achkar.com/new-experiment/">post on the topic</a> inspired me to do this whole thing) uses Google Calendar to do his tracking (and he’s made it public, so you can see it in real time <a href="http://david.achkar.com/life-log/">here</a>). However, I don’t use Google Calendar much so I decided I’d need another way to do this.</p>
+
+<p>Since I already use a combination of Google Sheets and Google Forms for tracking my household spending, I thought it’d be a good idea to start there.</p>
+
+<p>So I went ahead and created a simple Google form:</p>
+
+<p><img src="/assets/experiments/track-every-minute-form.jpg" alt="&quot;Google form&quot;" /></p>
+
+<p>Next, I added it to my phone as a home screen icon:</p>
+
+<p><img src="/assets/experiments/track-every-minute-home-screen.jpg" alt="&quot;Home screen&quot;" /></p>
+
+<p>That’s it! Now, whenever I want to track anything .. I can just hit the icon, fill in the details and hit Submit. Everything gets saved in a Google Sheet that I can then use for analysis.</p>
+
+<h2 id="results">Results</h2>
+
+<p>After doing this for about a month, here’s what I came up with:</p>
+
+<p><img src="/assets/experiments/track-every-minute-results.png" alt="&quot;Results&quot;" /></p>
+
+<p>You’ll notice all sorts of different color blocks, representing the different activities I was doing throughout the day. You can start to see trends develop — though having too many sub-categories does make it difficult to come up with any actionable insights.</p>
+
+<p>I’ll be taking another stab at this exercise in the near future, where I’ll try to focus on coming up with some sort of “productivity score” for the day — something I can optimize over time.</p>
+
+<h2 id="what-i-learned">What I learned</h2>
+
+<ul>
+  <li><strong>I became more productive</strong>: I found this out early on. I started policing myself, automatically catching myself spending too much time on one activity or the other. It’s a great way to keep yourself in check, and a beneficial side-effect of the <a href="https://en.wikipedia.org/wiki/Observer-expectancy_effect">observer-expectancy effect</a>.</li>
+</ul>
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Multivariate Linear Regression</title>
+  <meta name="description" content="Ah, now things start to get more complicated. We'd previously taken the most basic case where we only have one feature, and one output we're trying to predic...">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/machine-learning/multivariate-linear-regression/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body>
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">Multivariate Linear Regression</h1>
+  
+
+  <div class="meta"><span>December 19, 2016</span></div>
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<p>Here’s the deal. So far, we’d only discussed the most basic possible example: a case where you had:</p>
+
+<ul>
+  <li>a <strong>single feature</strong> (our \(x\), the area of the house)</li>
+  <li>a <strong>single output</strong> (our \(y\), the price of the house)</li>
+  <li>and a <strong>linear relationship</strong> between the two</li>
+</ul>
+
+<p>Now, we’re about to grow up .. because in the real world, we don’t just have a single feature. We have many .. sometimes even thousands!</p>
+
+<p>Think about it .. it sounds absolutely absurd that you would even think that it’s possible to accurately predict the price of a house based on area alone! So many other things matter, like the number of rooms, the floors, the size of the garden, how old it is and it’s sentimental value to you (actually, scratch that last one).</p>
+
+<p>So that’s what we’ll be covering in this post .. how to consider a more complex prediction example.</p>
+
+<p>Don’t forget our goal .. we’re still trying to come up with a hypothesis function that would allow us to accurately predict the price of the house, based on the inputs we’re given.</p>
+
+<p>Let’s do this.</p>
+
+<h3 id="revisiting-our-now-broken-equations">Revisiting our (now broken) equations</h3>
+
+<p>We’re going to have to go back and fix the equations we discussed earlier. The definitions (or rather, the meaning) of the equations won’t change .. but we no longer have just one \(x\) to deal with.</p>
+
+<p>First, <strong>a few new definitions.</strong></p>
+
+<p>Since we have many \(x\)’s now, let’s give them subscripts (e.g. \(x_1, x_2, x_3\)) to refer to our different features.</p>
+
+<p>Note that we already said that the bracketed-superscripts for \(x\) (like \(x^{(1)}, x^{(2)}\), etc.) represent samples in the training set. This still holds true. We just have to get used to seeing things like \(x_1^{(2)}\), which is the second row (or data point in our training data) of the first feature.</p>
+
+<p>We also need a way to refer to the total number of features we’ve got .. let’s go ahead and call that \(n\).</p>
+
+<p>Now that we have that out of the way, let’s take a look at those equations .. starting with our hypothesis \(h_0(x)\).</p>
+
+<h4 id="hypothesis-function-h_thetax">Hypothesis function \(h_\theta(x)\)</h4>
+
+<p><strong>Before</strong> (we had only one \(x\)):
+<script type="math/tex">h_\theta(x) = \theta_0 + \theta_1 x</script></p>
+
+<p><strong>After</strong> (we have many \(x\)’s):
+<script type="math/tex">h_\theta(x) = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \text{...}</script></p>
+
+<p>You’ll notice something going on here .. all the terms have both \(\theta\)’s and \(x\)’s .. except for that first one, the lonely looking \(\theta_0\). To simplify things, let’s go ahead and give it an \(x_0\) that has a value of 1 (so that it doesn’t change the equation in any way).</p>
+
+<p>Now, it looks like:</p>
+
+<p><script type="math/tex">h_\theta(x) = \theta_0 x_0 + \theta_1 x_1 + \theta_2 x_2 + \text{...}</script>
+<em>(where \(x_0=1\))</em></p>
+
+<p>Let’s take the next jump .. let’s lump up all of those \(\theta_0, \theta_1, \theta_2\), … parameters into a single vector like so:</p>
+
+<script type="math/tex; mode=display">\theta =
+\begin{bmatrix}
+\theta_0 \\
+\theta_1 \\
+\theta_2 \\
+\vdots \\
+\theta_n
+\end{bmatrix}</script>
+
+<p>.. and similarly ..</p>
+
+<script type="math/tex; mode=display">x =
+\begin{bmatrix}
+x_0 \\
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{bmatrix}</script>
+
+<p>Those weird looking towers are known in the mathematics parlance as <em>matrices</em>. If you have no idea what those are, you can think of them as layers of numbers, not very different from your good ole’ Big Mac. If you want to learn more, just check out this <a href="https://www.khanacademy.org/math/algebra2/alg-2-old-content/basic-matrix-operations-alg2/v/introduction-to-the-matrix">video here</a>. You may or may not remember that a matrix with just one column is known as a <em>vector</em>.</p>
+
+<p>So here, we’re treating our \(\theta\) and our \(x\) as a single vector, as opposed to many tiny numbers with little subscripts.</p>
+
+<p>So now, <strong>our new hypothesis equation</strong> will simply be:</p>
+
+<script type="math/tex; mode=display">h_\theta(x) = \theta^T x</script>
+
+<p>That weird looking T on top of the \(\theta\) is known as the <em>transpose</em> of \(\theta\), or \(\theta\) flipped on it’s side like so:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\theta^T =
+\begin{bmatrix}
+\theta_0 & \theta_1 & \theta_2 & \cdots & \theta_n
+\end{bmatrix} %]]></script>
+
+<p>The reason we use \(\theta^T\) and not \(\theta\) is so that the multiplication will work (if you don’t know how to multiply matrices, check out <a href="https://www.khanacademy.org/math/algebra2/alg-2-old-content/matrix-multiplication-alg2/v/matrix-multiplication-intro">this short video</a> for a primer).</p>
+
+<p>We now have a new equation for our hypothesis function! (keeping in mind that \(x_0=1\) or this whole business just won’t work).</p>
+
+<h4 id="cost-function-jtheta">Cost function \(J(\theta)\)</h4>
+
+<p>Our new and improved cost function now looks like this:</p>
+
+<script type="math/tex; mode=display">J(\theta) = \frac{1}{2m} \sum_{i=1}^m \left(\ h_\theta(x^{(i)}) - y^{(i)} \right)^2</script>
+
+<p>Next, let’s take a look at our gradient descent equation.</p>
+
+<h4 id="gradient-descent">Gradient descent</h4>
+
+<p>If you’ll recall, the gradient descent equation in the case of a single feature looked like this:</p>
+
+<script type="math/tex; mode=display">\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta)</script>
+
+<p>Substituting for \(J(\theta)\), that becomes:</p>
+
+<script type="math/tex; mode=display">\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} \left( \frac{1}{2m} \sum_{i=1}^m \left( h(x^{(i)}) - y^{(i)} \right)^2 \right)</script>
+
+<p>We then computed the partial derivative for each of our \(\theta_0, \theta_1\) individually, resulting in:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+
+\theta_0 & := \theta_0 - \alpha \frac{1}{m} \sum_{i=1}^m \left(h(x^{(i)}) - y^{(i)}\right) \\
+
+\theta_1 & := \theta_1 - \alpha \frac{1}{m} \sum_{i=1}^m \left(h(x^{(i)}) - y^{(i)}\right) x^{(i)}
+
+\end{align} %]]></script>
+
+<p>When replacing this with multiple features, my expectation was that things would get ickier .. much ickier. In fact, I was pleasantly surprised to realize that it wasn’t the case at all.</p>
+
+<p>A fundamental property of partial derivatives is that you only calculate the derivative with reference to the variable you’re deriving with (which are our \(\theta_0, \theta_1\), etc. variables).</p>
+
+<p>Since we’re only going to be computing the derivative with respect to <em>one</em> of these variables at a time, the resulting derivative looks just like the \(\theta_1\) term above.</p>
+
+<p>Namely, it’ll be:</p>
+
+<script type="math/tex; mode=display">% <![CDATA[
+\begin{align}
+
+\theta_0 & := \theta_0 - \alpha \frac{1}{m} \sum_{i=1}^m \left(h(x^{(i)}) - y^{(i)}\right) \\
+
+\theta_1 & := \theta_1 - \alpha \frac{1}{m} \sum_{i=1}^m \left(h(x^{(i)}) - y^{(i)}\right) x_1^{(i)} \\
+
+\theta_2 & := \theta_2 - \alpha \frac{1}{m} \sum_{i=1}^m \left(h(x^{(i)}) - y^{(i)}\right) x_2^{(i)}
+
+\end{align} %]]></script>
+
+<p>Not too bad, huh?</p>
+
+<p>All the equations look similar except for the first one. Wait .. remember that lonely \(x_0=1\) we were talking about earlier? Well, turns out it’s their in that first equation .. but we just didn’t see it (since it’s equal to 1):</p>
+
+<script type="math/tex; mode=display">\theta_0 := \theta_0 - \alpha \frac{1}{m} \sum_{i=1}^m \left(h(x^{(i)}) - y^{(i)}\right) x_0^{(i)}</script>
+
+<p>Now let’s write it in the general form:</p>
+
+<script type="math/tex; mode=display">\theta_j := \theta_j - \alpha \frac{1}{m} \sum_{i=1}^m \left(h(x^{(i)}) - y^{(i)}\right) x_j^{(i)}</script>
+
+<p>Kill the feature subset (represented by the subscript \(j\), since \(\theta\) is a vector anyway) and we’re left with:</p>
+
+<script type="math/tex; mode=display">\theta := \theta - \alpha \frac{1}{m} \sum_{i=1}^m \left(h(x^{(i)}) - y^{(i)}\right) x^{(i)}</script>
+
+<p>I don’t know about you but I’m feeling like I’ve had my fair share of math for now .. let’s jump into some good ole’ fashioned code.</p>
+
+<h2 id="implementing-things-in-code">Implementing things in code</h2>
+
+<p>Alright, enough of this math business .. let’s take a look at some code. I’ll be using <strong>Octave</strong> in this example, since that’s what the Machine Learning course uses (and it makes dealing with matrices, as well as all the rest of the Machine Learning stuff pretty easy).</p>
+
+<p>So yeah, Octave. The syntax is pretty self-explanatory, though writing it will take a bit of getting used to (at least for me anyway).</p>
+
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

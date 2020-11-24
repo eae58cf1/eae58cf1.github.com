@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Masterplan</title>
+  <meta name="description" content="Muslim technology entrepeneur. Learn by doing.
+">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/teleport/masterplan/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body>
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">Masterplan</h1>
+  
+
+  <h2 id="start-with-the-why">Start with the Why</h2>
+
+<p>My goal, over the next few months, is to find a solution to a problem that humanitarian aid agencies face in places across the world: <strong>the logistics issue of delivering supplies to towns and cities under siege</strong>.</p>
+
+<p>We all witnessed the aftermath of <a href="http://www.cnn.com/2016/01/09/middleeast/syria-madaya-starvation/index.html">Madaya</a> and numerous other Syrian cities, where people starved to death while aid agencies just 30km away couldn’t get through to help them until the situation reached it’s most dire state. It’s shocking they don’t seem to have any recourse outside of <a href="http://www.cnn.com/videos/world/2016/01/20/ban-ki-moon-speaks-about-madaya-war-crimes-curnow.cnn">waiting for the perpetrating governments</a> to reach some sort of resolution. With every passing day, children and families perish.</p>
+
+<blockquote>
+  <p>that most people in hard-to-reach and besieged areas remain difficult for the United Nations and their implementing partners to reach with humanitarian assistance, (UN Security Council <a href="http://unscr.com/en/resolutions/doc/2191">Resolution 2191</a>)</p>
+</blockquote>
+
+<p>This is the 21<sup>st</sup> century. We can do better. After messing around with UAV’s (Unmanned Aerial Vehicles a.k.a drones) in my spare time, I found them incredibly potent. Today’s technology easily allows small planes (no larger than 2m in wingspan) to do 100km+ trips on a single charge with a payload of several kilograms. That means that the solution to this problem is already <em>technically</em> within our reach.</p>
+
+<p>My goal is to <strong>provide individuals everywhere with the means to directly contribute to support the people in need</strong>.</p>
+
+<h2 id="high-level-plan">High level plan</h2>
+
+<p>My focus for the past few weeks, before the break started, was on <a href="/perpetual">building a perpetually flying UAV</a>. The idea being that, if you can build a plane that flys forever, then everything else is easy. Want to add payload, fine. That’s easier to do. Essentially, the idea is to tackle the most difficult problem first (range) and see what transpires.</p>
+
+<p>The only thing is, this takes <em>serious</em> time. The payout is also unclear. What will I gain when I do actually build this thing? How does it fit into the goal of aiding the people in need in Syria and elsewhere?</p>
+
+<p>The answer is it doesn’t; not directly. Back to the main plan then.</p>
+
+<p>If my goal was to optimize for helping people in need, how can I go about that in the quickest and most effective way possible? The answer is, get results quickly. If that means getting a ready-made UAV and doing a simple flight into Syria and back – even with a basic drop of just an orange – that’s fine. That’ll get you a small win early on; something you can use to generate more positive feedback, and get to the greater goal in smaller steps.</p>
+
+<p>Working alone isn’t easy, and this is a great way to maintain motivation – while achieving the results you set out to tackle.</p>
+
+<p>This is such a big problem, and having an intense focus is going to be crucial – both for following up on progress, as well as for managing the very limited resources you have (as an individual).</p>
+
+<p>By getting some concrete results early on, you could gain funding for a progressively bigger impact from sponsors. This is - after all - the essence of the Lean Startup way.</p>
+
+<p>It’s not to bet everything on a peripheral goal. But to get to the point we’re you’re celebrating a small win, early on – bite-size wins that can sustain bigger ones downstream.</p>
+
+<p>My two cents. I think it’s pretty clear what I would do next.</p>
+
+<h2 id="details">Details</h2>
+
+<p>Ok, the high level bit was relatively easy to do once I’d written it down. Now for the tricky bit: how do you actually implement this in real life?</p>
+
+<p>Well, let’s recap the high level goal for now, and find a way to achieve small wins. Start with a basic win – start with one person in, say, the border towns on the Lebanon/Syria or Turkey/Syria border delivering a tiny item (e.g. an orange).</p>
+
+<p>That’s 3 restrictions here:</p>
+<ul>
+  <li>one person</li>
+  <li>low range</li>
+  <li>low payload</li>
+</ul>
+
+<p>We’ll work on alleviating each of those 3 restrictions at a later milestone, but for now, I can live with that.</p>
+
+<p>Ok, so even to get to this point – a point where we can do this super-restricted test is going to need quite a bit of work. Firstly, we need to do a test to make sure that we can get a tiny range covered and back. I had a look at Google maps and it looks like the Turkish border city of Antakya is about 27km from the Syrian town of Salqin. If you can get a UAV that can go out 30km, and then fly back – then you’re in business.</p>
+
+<p><img src="/assets/projects/teleport/mission-v0-distance.png" alt="Distance required for mission v0" /></p>
+
+<p>There are some restrictions though. Assuming you’re going to be bringing this to Turkey somehow, you’re going to need to have some sort of way of putting this together yourself using very basic tools. You can bring in a motor, some carbon fiber struts, a Pixhawk and even some batteries. An airframe might be too big to bring in, unless it can be easily disassembled and reassembled.</p>
+
+<p>So we have:</p>
+<ul>
+  <li>low wing span (or something bigger that can be built using materials on site)</li>
+  <li>low cost (so experimentation doesn’t cost and arm and a leg)</li>
+  <li>have a basic release mechanism, for dropping the orange</li>
+  <li>video, for proof</li>
+</ul>
+
+<h3 id="previous-work">Previous work</h3>
+
+<p>Spotted a few videos on Youtube showing long range, variable payload flights:</p>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=Wyky6my9yFY">15km</a></li>
+  <li><a href="https://www.youtube.com/watch?v=z_PxhU9i9Ng">80km</a></li>
+  <li><a href="https://www.youtube.com/watch?v=JFiXa_urctQ">100km x 2!</a></li>
+</ul>
+
+<p>Also, read about a project (now defunct) called the <a href="http://syriaairlift.org">Syria Airlift project</a> started in Stanford, CA. The project doesn’t seem to have gotten very far beyond a prototype — they did no pilot runs in Turkey/Syria as far as I can tell. More on that <a href="http://www.afcea.org/content/?q=node/13875">here</a>.</p>
+
+<h2 id="legal">Legal</h2>
+
+<p>While the UN has already approved and passed resolutions supporting the “non-consensual delivery of humanitarian aid” to Syria, Turkey still has rules around drone use. I <a href="http://uavcoach.com/drone-laws-in-turkey/">had a look</a> and it seems that they are pretty stringent (all flights, including those of model aircraft have to be pre-approved by the Civil Aviation Authority there). Lebanon appears to be <a href="https://uavsystemsinternational.com/drone-laws-by-country/lebanon-drone-laws/">more lax</a>, though as a party to the conflict they might not be so supportive.</p>
+
+<p>Excerpt of UN resolution below:</p>
+
+<blockquote>
+  <p>Decides to renew the decisions in paragraphs 2 and 3 of Security Council resolution 2165 (2014) for a further period of twelve months, that is, until 10 January 2018; – <cite><a href="http://unscr.com/en/resolutions/doc/2332">UNSCR 2232</a></cite></p>
+</blockquote>
+
+<p>It’d be worth talking to aid agencies in both Lebanon and Turkey, as well as the UN somehow. If you know someone who can help, please <a href="mailto:hi@yaz.in">get in touch with me</a>.</p>
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

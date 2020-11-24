@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Scaled flight &mdash; Take 4</title>
+  <meta name="description" content="Since the last attempt we learned that we’re going to have to shed some weight (or increase the thrust) in order to keep the plane in the air. That’s what I’...">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/teleport/logs/mini-flight-take-4/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body>
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">Scaled flight &mdash; Take 4</h1>
+  
+
+  <div class="meta"><span>February 12, 2017</span></div>
+<p>Since <a href="/teleport/logs/mini-flight-take-3">the last attempt</a> we learned that we’re going to have to shed some weight (or increase the thrust) in order to keep the plane in the air. That’s what I’ll be doing before this 4th attempt.</p>
+
+<blockquote>
+  <p>Goal: Lose 123 - 143 grams</p>
+</blockquote>
+
+<h2 id="losing-weight">Losing weight</h2>
+<p>Let’s do an inventory of the heaviest items:</p>
+<ul>
+  <li>Battery: 148g</li>
+  <li>Power module: 41g (APM PM = 24g, Switch wire = 17g)</li>
+  <li>APM: 32g</li>
+  <li>GPS module: 28g</li>
+  <li>Receiver: 19g (Receiver = 10g, Wires = 9g)</li>
+  <li>Black plastic cover: 15g</li>
+</ul>
+
+<p>To achieve the target, I’ll be replacing the Li-Ion battery with a smaller 1,300 mAh 3S battery that weighs just 77g (including a switch I added). That’s a savings of 71g.</p>
+
+<p>I’ll also lose the APM Power Module that weighs 24g. It’s <a href="http://ardupilot.org/plane/docs/common-3dr-power-module.html">pretty useful</a>, but I just can’t justify the weight.</p>
+
+<p>That brings the total to 95g in savings. We’re still about 30g short.</p>
+
+<p>The GPS comes in a heavy plastic case. I removed that and this shaved off another 13g. I also won’t be using the black cover on the front of the plane. That’s another 15g in savings.</p>
+
+<p>I could save 9g on the wires that are being used with the receiver (I’m using PWM, not CPPM which would require one wire instead of 6). However, the receiver I’m using doesn’t support CPPM so I’ll have to keep them for now.</p>
+
+<p>The final tally is 71g + 24g + 13g + 15g = 123g! Just within the safe safe operating range  ⚖️</p>
+
+<h2 id="prep-for-flight">Prep for flight</h2>
+<p>Made all of the changes referenced above, and did the final weigh-in:</p>
+
+<p><img src="/assets/projects/teleport/take-4-weigh-in.png" alt="Final weigh-in" /></p>
+
+<p>Great — we fit nicely into the safe operating range (between 550 - 570g). We’re just about ready to go. I ran all of the checks on the <a href="/teleport/resources/preflight-checklist">pre-flight checklist</a> and went out to the field.</p>
+
+<p>When running the checks, it’s worth noting that I had a really hard time balancing the Center of Gravity at the right spot. Even after moving the (smaller) battery all the way up the nose of the plane, it was still tail-heavy. I moved the receiver up front and it was still off. I decided to go ahead anyway. There’s nothing more I could’ve done without adding more weight to it.</p>
+
+<h2 id="flying-time">Flying time</h2>
+<p>It was a really windy day (winds clocked in at about 30kph) but I decided to fling it up anyway.</p>
+
+<p><img src="/assets/projects/teleport/take-4-ready-to-go.png" alt="Ready to go" /></p>
+
+<p>Fired it up and it flew like a beauty! I was easily able to pick up altitude in Stabilize mode and then flicked the Loiter mode on and it started circling on its own!</p>
+
+<p>Even managed to get a video taken:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/qMfMj3W4syc" frameborder="0" allowfullscreen=""></iframe>
+
+<p>There you go — it took 4 attempts, but it finally worked! Phew, now I can check this off.</p>
+
+<h2 id="later-">Later …</h2>
+<p>I went home and charged up the battery so I could take it for another spin. When I plugged it in, I got a whiff of a burning smell. Then I saw smoke coming out of the APM!</p>
+
+<p>I immediately turned it off, but the damage was done … my APM died:</p>
+
+<p><img src="/assets/projects/teleport/dead-apm.png" alt="Dead APM" /></p>
+
+<p>I still don’t know exactly what the cause might’ve been — it could’ve been because I had inadvertantly placed some insulation tape on the AMTEL chip. Who knows? Luckily, I have a spare APM so the plan won’t get impacted.</p>
+
+<p>Overall, doesn’t matter though … it worked!</p>
+
+<p><img src="/assets/projects/teleport/take-4-worked.png" alt="First working flight" /></p>
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

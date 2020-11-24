@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Teleport</title>
+  <meta name="description" content="Muslim technology entrepeneur. Learn by doing.
+">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/teleport/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body>
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">Teleport</h1>
+  
+
+  <p><em>Note: I originally started a project called <a href="/perpetual">“Perpetual”</a> with the aim of building a plane capable of perpetual flight. It’s since morphed into this project (more details <a href="/teleport/masterplan">here</a>).</em></p>
+
+<h2 id="overview">Overview</h2>
+
+<blockquote>
+  <p>🎯 <strong>Grand goal</strong>: Allow anyone to directly assist people in need anywhere in the world.</p>
+</blockquote>
+
+<ul>
+  <li><a href="/teleport/masterplan">Masterplan</a>. You really want to read this first.</li>
+</ul>
+
+<h2 id="project-status">Project status</h2>
+
+<p><strong>🚧  Checkpoint #1: Deliver an orange 25km away and return autonomously</strong></p>
+
+<ul class="task-list">
+  <li>✅ <a href="/teleport/logs/plane-design">Determine design attributes required for plane</a></li>
+  <li>✅ Build / procure the scaled-down plane
+    <ul>
+      <li>✅ Order the full-sized plane</li>
+      <li>✅ <a href="/teleport/logs/build-the-plane/">Build the scaled-down model</a></li>
+    </ul>
+  </li>
+  <li>✅ Run an autonomous flight with the scaled-down plane
+    <ul>
+      <li>❎ 1<sup>st</sup> flight attempt: <a href="/teleport/logs/build-the-plane">Failed</a></li>
+      <li>❎ 2<sup>nd</sup> flight attempt: <a href="/teleport/logs/build-the-plane-again">Failed</a></li>
+      <li>❎ 3<sup>rd</sup> flight attempt: <a href="/teleport/logs/mini-flight-take-3">Failed</a></li>
+      <li>✅ 4<sup>th</sup> flight attempt: <a href="/teleport/logs/mini-flight-take-4">Success!</a></li>
+    </ul>
+  </li>
+  <li>✅ <a href="/teleport/logs/mini-waypoint-flight">Test autonomous waypoint flight with scaled-down plane</a>
+    <ul>
+      <li>❎ 1<sup>st</sup> flight attempt: <a href="/teleport/logs/mini-waypoint-attempt-1">Failed</a></li>
+      <li>❎ 2<sup>nd</sup> flight attempt: <a href="/teleport/logs/mini-waypoint-attempt-2">Failed</a></li>
+      <li>❎ 3<sup>rd</sup> flight attempt: <a href="/teleport/logs/mini-waypoint-attempt-3">Failed</a></li>
+      <li>❎ 4<sup>th</sup> flight attempt: <a href="/teleport/logs/mini-waypoint-attempt-4">Failed</a></li>
+      <li>❎ 5<sup>th</sup> flight attempt: <a href="/teleport/logs/mini-waypoint-attempt-5">Failed</a></li>
+      <li>✅ 6<sup>th</sup> flight attempt: <a href="/teleport/logs/mini-waypoint-attempt-6">Success!</a></li>
+    </ul>
+  </li>
+  <li>✅ Receive full-sized plane</li>
+  <li>➡️️ <a href="/teleport/logs/build-full-sized-plane">Build the full-sized plane</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Test autonomous flight with full-sized plane</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Setup payload test (an orange)</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Test flight with payload release</li>
+  <li class="task-list-item">➡️️  <a href="/teleport/logs/aid-agencies">Coordinate with aid agencies in Lebanon/Turkey</a></li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />Fly there and test orange delivery!</li>
+</ul>
+
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

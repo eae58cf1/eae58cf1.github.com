@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Intial wing design parameters</title>
+  <meta name="description" content="The purpose of this step is to come up with some sort of initial design for the aircraft wing. This would include span, chord and airfoil shape — as well as ...">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/perpetual/logs/initial-wing-parameters/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body>
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">Intial wing design parameters</h1>
+  
+
+  <p>The purpose of this step is to come up with some sort of initial design for the aircraft wing. This would include span, chord and airfoil shape — as well as thickness of the wing. We’re going to be using expanded polystyrene (EPS) foam for the wing material since that’s all I have available. Ideally, I’d find something to laminate it with in order to reduce it’s Reynolds number.</p>
+
+<!-- update previous post to talk about reynolds number -->
+
+<p>Since I don’t know much about wing design, besides <a href="/logs/general-guidelines-for-wing-design">the guidelines we discussed</a> in the last post, I’m going to use the help of a simulator. The specific one I’ll be using is <a href="https://www.grc.nasa.gov/WWW/k-12/airplane/foil3.html">NASA’s FoilSim III</a> — which I found really surprisingly easy to use.</p>
+
+<p><strong>Note:</strong> It’s easy to use but it was a nightmare to setup. I had to create a Windows virtual machine (since I’m running a Mac) and install the Java SDK and disable all security settings before I could get the 15 year old Java applet to finally run.</p>
+
+<p><img src="/assets/projects/perpetual/nasa-foilsim.png" alt="NASA FoilSIM III" /></p>
+
+<h2 id="goal">Goal</h2>
+<p>Before messing around with the FoilSim app, just keep the design parameters in mind:</p>
+
+<script type="math/tex; mode=display">\text{Lift} = \text{Plane Weight} + ~30\%</script>
+
+<p>The 30% there is a buffer.</p>
+
+<p>Also,</p>
+<ul>
+  <li>Low wing loading (\(\lt 50 kg/m^2\))</li>
+  <li>High aspect ratio</li>
+</ul>
+
+<p>While we’d normally need some sort of weight measurement, I’m going to consider 1.5kg as a good starting point (for batteries, solar cells and wing body) considering a miniature version of our plane. At the end of this exercise, we’ll consider whether this is a meaningful number or not — but let’s not let that hold us up for now.</p>
+
+<p>Here’s what we expect to get from FoilSim:</p>
+<ul>
+  <li>Drag, in Newtons (which is the force that our motor will need to overcome)</li>
+  <li>Speed (to tell us what speed we should fly for efficient energy consumption)</li>
+  <li>Stall speed (we need to <strong>always fly above the stall speed</strong>)</li>
+  <li>Wing dimensions (span, chord, airfoil shape)</li>
+</ul>
+
+<h2 id="foilsim-time">FoilSim time</h2>
+
+<p>While messing with FoilSim, I learned a few things that I really should clarify:</p>
+<ol>
+  <li>The lift changes with angle of attack (the incline of the wing, relative to the horizontal plane). I considered the \(\text{Lift} = \text{Weight} + 30\%\) guideline above at the neutral angle of attack of \(\alpha = 3 \deg\).</li>
+</ol>
+
+<p>Here’s the result:</p>
+
+<p><img src="/assets/projects/perpetual/nasa-foilsim-results-v1.png" alt="NASA FoilSIM III" /></p>
+
+<p>Ended up looking somewhat similar to <a href="http://airfoiltools.com/airfoil/details?airfoil=e214-il">this glider airfoil</a>, even though I just messed around with alot of knobs until I found the results I was looking for. If I knew how to simulate the simulator, I could write a loop to test ranges of values and programmatically find the most desired result. Anyway, the results are pretty good (though definitely not the best possible).</p>
+
+<p>I had to pick a higher speed of 30 km/h in order to get the necessary lift (16N ≈ 1.6kg). Here’s the raw output data in txt format (<a href="/assets/projects/perpetual/airfoil-v1.txt">View wing data</a>).</p>
+
+<h2 id="results">Results</h2>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell"> Camber <span class="o">=</span> 5.0 % chord , Thickness <span class="o">=</span> 10.0 % chord ,
+ Chord <span class="o">=</span> 0.2 m , Span <span class="o">=</span> 2.0 m , Aspect Ratio <span class="o">=</span> 10 ,
+ Surface Area <span class="o">=</span> 0.4 sq m ,
+  Angle of attack <span class="o">=</span> 3.0 degrees ,
+ Standard Earth Atmosphere
+ Altitude <span class="o">=</span> 75 m , Density <span class="o">=</span> 1.216kg/cu m
+ Pressure <span class="o">=</span> 100.365kPa, Temperature <span class="o">=</span> 14C,
+ Airspeed <span class="o">=</span> 30 km/hr ,
+  Lift  <span class="o">=</span> 16 Newtons 
+  Drag  <span class="o">=</span> 1 Newtons </code></pre></figure>
+
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

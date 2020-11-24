@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Losing 100g everyday</title>
+  <meta name="description" content="After several recent vacations (and food binges). I've always thought small changes done regularly are better than big changes done occasionally. So here's m...">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/experiments/lose-100g-a-day/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body>
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">Losing 100g everyday</h1>
+  
+
+  <div class="meta"><span>November 15, 2020</span></div>
+<h2 id="the-experiment">The experiment</h2>
+
+<p>The world of weight loss is a very complicated one. There’s all sorts of diets, plans and routines that you’re supposed to follow — and frankly, a large element of nonsense too.</p>
+
+<p>But it doesn’t have to be. I mean, let’s consider a first principles approach to weight loss. Picture the human body as a lump of energy. According to the law of conservation of energy:</p>
+
+<blockquote>
+  <p>the total energy of an isolated system remains constant—it is said to be conserved over time. <strong>Energy can neither be created nor destroyed; rather, it transforms from one form to another.</strong></p>
+</blockquote>
+
+<p>Our bodies are not isolated systems — we have energy coming in (when we eat/drink) and energy going out (for basic metabolism, exercise, etc.). However, if we just track both of those things, we should be able to accurately control the weight we lose / gain (since weight <em>is</em> energy).</p>
+
+<p>The beauty of this approach, if it works, is that you can eat whatever you want. Bite the fatty backside of a bison if you like, a calorie is a calorie! Instead of focusing on the type of food, we focus on the caloric content (which is more directly influenced by the portion size).</p>
+
+<p>In summary:</p>
+<ul>
+  <li>Track the energy coming into your body (calories in), and the energy going out (calories out)</li>
+  <li>Make sure more energy is going out than coming in (by at least 100g/day)</li>
+  <li>That’s it!</li>
+</ul>
+
+<h2 id="setup">Setup</h2>
+
+<p>First, I found my Basal Metabolic Rate (BMR). That’s how many calories I’ll burn a day even if I never get out of bed. It’s the energy my body consumes to stay alive.</p>
+
+<p>To find your BMR, you can use the formula (which I got from <a href="https://bmi-calories.com/bmr-calculator.html">here</a>):</p>
+
+<script type="math/tex; mode=display">BMR = 88.362 + (13.397 * Weight_{kg}) + (4.799 * Height_{cm}) - (5.677 * Age)</script>
+
+<p>Mine turned out to be 1,830 calories.</p>
+
+<p>Ok, so the nett calorie count for the day \(Cal_{nett}\) is:</p>
+
+<script type="math/tex; mode=display">Cal_{nett} = Cal_{in} - Cal_{out} - BMR</script>
+
+<p>I convert \(Cal_{nett}\) into grams by dividing by 9, since 1g of fat is equivalent to 9 calories. That tells me how much weight I lost on a particular day.</p>
+
+<p>Note that this does assume that your body absorbs 100% of the calories you eat, which is not true. The calories you eat represent a ceiling — but a good chunk of the food you eat doesn’t get absorbed, and well - passes right through!</p>
+
+<p>Assuming an absorption ratio of 95% (or 0.95):</p>
+
+<script type="math/tex; mode=display">Cal_{nett} = Cal_{in} * 0.95 - Cal_{out} - BMR</script>
+
+<p>And, the math lesson is over 😄</p>
+
+<p>I created a Google Sheet to calculate all this automatically:</p>
+
+<p><img src="/assets/experiments/weight-loss-settings-sheet.png" alt="Google Sheet with Settings" /></p>
+
+<p>And to make this all easier to track, I also setup a Google Form which I used to fill in the calories I consume/use every day:</p>
+
+<p><img src="/assets/experiments/weight-loss-tracker.png" alt="Google form for tracking weight loss" /></p>
+
+<p>(You can download both the Sheet &amp; Form <a href="#below">below</a>)</p>
+
+<p>Everytime I eat something (or do some exercise), I log it in … and the sheet is updated automatically. At the end of the day, I throttle my calorie consumption to ensure that there’s always a net loss of 100g or so of body weight.</p>
+
+<h2 id="rules">Rules</h2>
+
+<ul>
+  <li>Log all incoming and outgoing energy</li>
+  <li>Stop eating once you’ve hit a 100g deficit for a particular day</li>
+</ul>
+
+<h2 id="update-1-month">Update: 1 month</h2>
+
+<p>Wow, this experiment has worked better than I could’ve ever imagined! Checkout the results below:</p>
+
+<p><img src="/assets/experiments/weight-loss-results-1-month.png" alt="Results after 1 month" /></p>
+
+<p>The expected weight is 75.0kg as of today, but my actual weight (when I first wake up in the morning) is 74.5kg!</p>
+
+<p><img src="/assets/experiments/weight-loss-results-1-month-actual.png" alt="Actual weight" /></p>
+
+<p>That’s insane — it means I’m actually losing <em>more</em> than 100g each day, since I’ve lost 3.3kg to date (in just 30 days).</p>
+
+<p>I’m going to keep this experiment going for another month or so until I hit the 70kg range, which I think would be ideal. I’ll make sure to share more details around the specifics of how I accomplished this, and tips you can use to do the same once I’ve got a firm grip of things (say in a month or so).</p>
+
+<div id="below"></div>
+
+<h2 id="now-you-can-do-this-too">Now, you can do this too!</h2>
+
+<p>Because I’m such a great guy, I’m sharing the Google Form &amp; Google Sheet templates that I used to track my progress:</p>
+
+<p>👉 <a href="https://drive.google.com/drive/folders/1bXvxypWbJ3iIjskVOsa7IHGkxrgQ7xCP?usp=sharing">Link to Google Form &amp; Sheet</a></p>
+
+<p>To use this yourself:</p>
+
+<ol>
+  <li>Copy the Form and Sheet to your own Google Drive folder</li>
+  <li>Update the Settings in the “⚙️” sheet to include your own details</li>
+  <li>Start tracking calories, and observe your progress in the “Summary” sheet!</li>
+</ol>
+
+<p>If you found this useful, <a href="https://twitter.com/yazinsai">let me know</a>!</p>
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

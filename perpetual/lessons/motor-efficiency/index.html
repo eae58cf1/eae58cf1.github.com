@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Motor Efficiency</title>
+  <meta name="description" content="In this post, we discuss what things you need to consider when picking a motor for your efficient aircraft.">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/perpetual/lessons/motor-efficiency/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body>
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">Motor Efficiency</h1>
+  
+
+  <div class="meta"><span>December 24, 2016</span></div>
+<p>Planes fly when motors fling air around, usually in the opposite direction of motion (i.e. for fixed wing planes, the motors pushes air back in order to move the plane forward).</p>
+
+<p>Now, when selecting a motor for efficient flight, we have a pick between low kV motors and high kV motors. The kV rating is just a measure for number of revolutions per supplied Volt, when you haven’t put any load on the motor.</p>
+
+<p>A 2200kV motor supplied with 11.1 volts would spin at about 2,200 * 11.1 = 24,420 rpm (again, this is with no propeller on).</p>
+
+<p>So big kV numbers mean the motor spins really fast, and smaller kV motors means it spins slower. Fast spinning motors can afford to use smaller propellers (and as a result move less air, but faster) and slower moving motors are usually coupled with bigger propellers (spinning more air <em>slower</em>).</p>
+
+<h2 id="which-is-more-efficient">Which is more efficient?</h2>
+
+<p>Low kV motors, with big propellers.</p>
+
+<p>Why? The logic is simple, and relies on the formula for Kinetic Energy:</p>
+
+<script type="math/tex; mode=display">K.E. = \frac12 m v^2</script>
+
+<p>The total kinetic energy (or work) required to move a bunch of air is dependent on the mass of the air (\(m\)) and the square of the velocity (\(v^2\)).</p>
+
+<p>The key is in the squared velocity, coupled with Newton’s second law \(F = ma = m \frac{\Delta v}{\Delta t}\). It’s clear that Newton gives you the choice of either expelling more mass, or increasing the velocity change \(\Delta v\) in that expelled mass — they both have a proportional impact on the resulting force.</p>
+
+<p>However, we’ll choose more mass (over velocity) every day of the week — since we now know that the required kinetic energy will be lower for a larger mass flung at a smaller velocity,</p>
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

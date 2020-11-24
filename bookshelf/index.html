@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>My Bookshelf</title>
+  <meta name="description" content="I like reading, and here's a list of all of the books that I've read recently, along with my comments, notes and lessons learned from every single one of them.">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/bookshelf/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body class="page-bookshelf">
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">My Bookshelf</h1>
+  
+
+  
+<p>A list of some of the books that I've read, with the most recent ones listed first. You'll notice that I mostly read business books, though there are some other genres in there too.</p>
+
+<ul class="post-list">
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/the-maverick.jpg" title="The Maverick And His Machine">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/the-maverick-and-his-machine/">The Maverick And His Machine</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/code.jpg" title="Code">
+        </div>
+        <div class="media-body">
+          
+            <h3>Code</h3>
+            *Currently reading*
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/profiles-of-the-future.jpg" title="Profiles Of The Future">
+        </div>
+        <div class="media-body">
+          
+            <h3>Profiles Of The Future</h3>
+            *Currently reading*
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/eccentric-orbits.jpg" title="Eccentric Orbits">
+        </div>
+        <div class="media-body">
+          
+            <h3>Eccentric Orbits</h3>
+            *Currently reading*
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/never-split-the-difference.jpg" title="Never Split The Difference">
+        </div>
+        <div class="media-body">
+          
+            <h3>Never Split The Difference</h3>
+            *Currently reading*
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/a-triumph-of-genius.jpg" title="A Triumph Of Genius">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/a-triumph-of-genius/">A Triumph Of Genius</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/deep-work.jpg" title="Deep Work: Rules for Focused Success in a Distracted World">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/deep-work/">Deep Work: Rules for Focused Success in a Distracted World</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/are-your-lights-on.jpg" title="Are Your Lights On">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/are-your-lights-on/">Are Your Lights On</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+    <span class="off">☆</span>
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/how-to-fail-at-almost-everything-and-still-win-big.jpg" title="How To Fail At Almost Everything And Still Win Big">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/how-to-fail-at-almost-everything-and-still-win-big/">How To Fail At Almost Everything And Still Win Big</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/i-invented-the-modern-age.jpg" title="I invented the modern age: The rise of Henry Ford">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/i-invented-the-modern-age/">I invented the modern age: The rise of Henry Ford</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/red-notice.jpg" title="Red Notice: A True Story of High Finance, Murder, and One Man’s Fight for Justice">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/red-notice/">Red Notice: A True Story of High Finance, Murder, and One Man’s Fight for Justice</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/the-wizard-of-menlo-park.jpg" title="Thomas Edison: The wizard of Menlo Park">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/the-wizard-of-menlo-park/">Thomas Edison: The wizard of Menlo Park</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/the-man-who-invented-the-20th-century.jpg" title="Nikola Tesla: The man who invented the 20th century">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/the-man-who-invented-the-20th-century/">Nikola Tesla: The man who invented the 20th century</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/dyson-against-the-odds.jpg" title="Dyson: Against the Odds">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/dyson-against-the-odds/">Dyson: Against the Odds</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/the-subtle-art-of-not-giving-a-f.jpg" title="The Subtle Art of Not Giving a f&#42;ck: A Counterintuitive Approach to Living a Good Life">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/the-subtle-art-of-not-giving-a-f/">The Subtle Art of Not Giving a f&#42;ck: A Counterintuitive Approach to Living a Good Life</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/debt-the-first-5000-years.jpg" title="Debt - Updated and Expanded: The First 5,000 Years">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/debt-the-first-5000-years/">Debt - Updated and Expanded: The First 5,000 Years</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/the-dream-machine.jpg" title="The Dream Machine: J. C. R. Licklider and the Revolution That Made Computing Personal">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/the-dream-machine/">The Dream Machine: J. C. R. Licklider and the Revolution That Made Computing Personal</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/swarm-troopers.jpg" title="Swarm Troopers: How small drones will conquer the world">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/swarm-troopers/">Swarm Troopers: How small drones will conquer the world</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/1984.jpg" title="1984">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/1984/">1984</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/so-good-they-cant-ignore-you.jpg" title="Be so good they can't ignore you">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/be-so-good-they-cant-ignore-you/">Be so good they can't ignore you</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+    <span class="off">☆</span>
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/a-guide-to-the-good-life.jpg" title="A guide to the good life">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/a-guide-to-the-good-life/">A guide to the good life</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/do-the-work.jpg" title="Do the Work">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/do-the-work/">Do the Work</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/chaos-monkeys.jpg" title="Chaos Monkeys: Obscene fortune and random failure in silicon valley">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/chaos-monkeys/">Chaos Monkeys: Obscene fortune and random failure in silicon valley</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/shoe-dog.jpg" title="Shoe Dog - A memoir by the creator of Nike">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/shoe-dog/">Shoe Dog - A memoir by the creator of Nike</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/benjamin-franklin-autobiography.jpg" title="Benjamin Franklin Autobiography (Annotated)">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/autobiography-of-ben-franklin/">Benjamin Franklin Autobiography (Annotated)</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/dealers-of-lightning.jpg" title="Dealers of Lightning: Xerox PARC and the Dawn of the Computer Age">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/dealers-of-lightning/">Dealers of Lightning: Xerox PARC and the Dawn of the Computer Age</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/the-idea-factory.jpg" title="The Idea Factory: Bell Labs and the Great Age of American Innovation">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/the-idea-factory/">The Idea Factory: Bell Labs and the Great Age of American Innovation</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/high-output-management.jpg" title="High Output Management">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/high-output-management/">High Output Management</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+    <li>
+      <div class="media">
+        <div class="media-image">
+          <img class="cover" src="/assets/bookshelf/the-wright-brothers.jpg" title="The Wright Brothers">
+        </div>
+        <div class="media-body">
+          
+            <h3><a href="/bookshelf/the-wright-brothers/">The Wright Brothers</a></h3>
+            <div class="rating">
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+    <span class="on">★</span>
+  
+  
+  
+    <span class="off">☆</span>
+  
+</div>
+
+
+          
+        </div>
+      </div>
+    </li>
+  
+</ul>
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Scaled flight &mdash; Take 3</title>
+  <meta name="description" content="Here’s what we learned from the last flight:">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/teleport/logs/mini-flight-take-3/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body>
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">Scaled flight &mdash; Take 3</h1>
+  
+
+  <div class="meta"><span>February 12, 2017</span></div>
+<p>Here’s what we learned from <a href="/teleport/logs/build-the-plane-again/">the last flight</a>:</p>
+
+<ul>
+  <li>✅ Secure battery in place</li>
+  <li>✅ Re-attach wings</li>
+  <li>✅ Fix nose</li>
+  <li>✅ Fix/Replace ESC</li>
+  <li>✅ Pre-flight checklist</li>
+</ul>
+
+<h2 id="pre-flight-checklist">Pre-flight checklist</h2>
+<p>From today onwards, before every flight, I’ll be following the below sequence:</p>
+
+<ul>
+  <li>Calibrate APM (Compass &amp; Accelerometer)</li>
+  <li>Check battery level. Charge if necessary</li>
+  <li>Check center of gravity. It should be about 1/3rd of the chord behind the front edge of the wing.</li>
+  <li>Balance the propeller</li>
+  <li>Check control surfaces
+    <ul>
+      <li>Right pitch on transmitter should move <strong>right aileron up</strong> and left aileron down. Left pitch should do the opposite</li>
+      <li>Check centering on control surfaces when the transmitter controls are neutral. They should be flush with the body</li>
+    </ul>
+  </li>
+  <li>Switch to Stabilize mode. Move the plane across all axes and check that the compensation it makes is consistent with what you’d expect (if you roll left, expect it to attempt to counteract that roll by rolling right).</li>
+  <li>Check Flight mode on Transmitter</li>
+  <li>Check for GPS lock (flashing blue LED on the GPS unit)</li>
+</ul>
+
+<h2 id="additional-mods">Additional mods</h2>
+<p>I made a few more departures from previous attempts:</p>
+
+<ul>
+  <li>Removed the APM case. There just wasn’t enough space to keep the whole thing in there, so I just removed the case. Will monitor the vibration levels on the APM to see if this is OK. For now, I just added some vibration absorbing tape under the APM board where it attaches to the plane.</li>
+  <li>Added a power switch. Removing the battery connector from the APM power module is just a pain, and it moves the APM board just ever so slightly each time. I just replaced the whole ordeal with a push switch. Now it’s just a flick of a switch to power on/off the plane.</li>
+  <li>Did not apply lock-tight to the propeller. I couldn’t screw the collet adapter onto the propeller holder properly, so I stopped applying it. Now I just make extra sure that it’s nice and tight.</li>
+  <li>Put a sheet of aluminium foil under the APM to help reduce the interference with the onboard magnetometer (compass) from the power wires just underneath it. If that doesn’t work, I’ll wire up the external magentometer on the GPS (Hadn’t done that yet because I don’t have the DF13 connector that the APM uses).</li>
+</ul>
+
+<h2 id="flight">Flight</h2>
+<p>I made a video of the flight attempt but my crappy camera recorded a corrupt file. Here’s what happened:</p>
+
+<p><img src="/assets/projects/teleport/axn-take-3-ready.png" alt="AXN - Take 3 - ready" /></p>
+
+<p>It was snowing today but I decided to take it out anyway. This time, I made sure to follow the pre-flight checklist and the take off was really smooth. There was just one issue — I couldn’t get much lift. Despite applying full elevator the plane was unable to stay up in the air for long. It was stable, so it wasn’t a center of gravity problem — it just didn’t gain altitude.</p>
+
+<p>After a few attempts, all ending up with the plane gliding down to the ground (despite full throttle and max elevator), I stopped trying. I went back and checked on the weight (something I hadn’t done earlier):</p>
+
+<p><img src="/assets/projects/teleport/axn-take-3-overweight.png" alt="Overweight AXN" /></p>
+
+<p>There you go. The recommended weight is between 550 - 570g and my plane weighed in at 693g! That’s 123 grams over the manufacturer limit, no wonder.</p>
+
+<p>A heavier plane needs to move faster in order to stay in the air. The faster speed would result in more lift, but it comes at the cost of greater drag. In order to overcome this increased drag, we need to have more thrust.</p>
+
+<p>I now have two options:</p>
+<ul>
+  <li>Reduce the weight</li>
+  <li>Increase the thrust (in order to overcome the extra drag that comes with the added weight). I may also need to launch it at a higher speed in order to achieve the minimum lift (e.g. using a catapult)</li>
+</ul>
+
+<blockquote>
+  <p>Lesson learned: Shed some weight or increase the thrust (with a faster/torque-ier motor, or a larger prop)</p>
+</blockquote>
+
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

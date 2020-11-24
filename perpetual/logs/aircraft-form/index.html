@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Aircraft forms</title>
+  <meta name="description" content="Before we try finding the optimum design parameters for a plane, we need to decide on a lift vehicle form. The most popular is the fixed wing "aeroplane" des...">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/perpetual/logs/aircraft-form/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body>
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">Aircraft forms</h1>
+  
+
+  <div class="meta"><span>December 26, 2016</span></div>
+<p>Before we can start designing the aircraft, we need to decide on what sort of aircraft it’s going to be. The most popular form is the fixed-wing plane (like the one shown below), but it’s certainly not the only choice.</p>
+
+<p><img src="/assets/projects/perpetual/fixed-wing-plane.png" alt="Fixed wing plane" /></p>
+
+<p>Other forms include:</p>
+
+<ul>
+  <li>Quadcopters</li>
+  <li>Buoyant flight (e.g. airships, hot air balloons)</li>
+  <li>Helicopters</li>
+</ul>
+
+<p>When deciding on the type of vehicle that we need to use, we need to consider all of our requirements, namely:</p>
+
+<ul>
+  <li>That we want to use as little power as possible (as explained in the <a href="/perpetual/masterplan">Masterplan</a>)</li>
+  <li>That we have a sufficiently large surface area (in order to lay out the solar cells for power generation)</li>
+  <li>That it’s reasonably small. I don’t have a spare hangar where I can build this thing out, so … yeah, small.</li>
+</ul>
+
+<h2 id="quadcopters">Quadcopters</h2>
+<p>There are a couple of reasons why these may not be a good idea:</p>
+
+<ul>
+  <li>They have 4 motors, which means they’re going to suck a lot of power. Also, they have a small surface area which means we’re not going to be able to generate much power via solar cells.</li>
+</ul>
+
+<h2 id="buoyant-flight-airships">Buoyant flight (Airships)</h2>
+<p>This actually sounds pretty reasonable. Using an airship means you won’t require any vertical thrust to carry the aircraft since it relies on the principle of buoyancy to achieve lift. Atmospheric pressure exerts a force on objects that are less dense than the surrounding air, causing them to rise.</p>
+
+<p>A beautiful solution, that doesn’t rely on any sort of fuel to move! Alas, there are a few downsides:</p>
+
+<ul>
+  <li>They need to be pumped with gases that are lighter than air. Lighter-than-air gases include Hot air (like a hot air balloon which would require a combustion fuel for heating), Neon (rare, expensive), Ammonia (poisonous), Methane (flammable), Hydrogen (extremely flammable) and Helium (expensive). Here in the UK, Helium costs about <a href="https://www.boconlineshop.com/shop/en/uk/helium-110745-101">£100 per m<sup>3</sup></a> (~$125).</li>
+  <li>They are huge, since you need to displace a large amount of air to compensate for any sort of added weight. Consider that air has a density of 1.29 kg/m<sup>3</sup>. If you’re using Helium to lift the airship (Helium has a density of 0.164 kg/m<sup>3</sup>), then you get just 1.1 kg of lift for every m<sup>3</sup> of the gas. That means you’ll need several m<sup>3</sup> to get anything useful up in the air.</li>
+</ul>
+
+<h2 id="the-remaining-contenders">The remaining contenders</h2>
+<p>This just leaves Helicopters and Fixed Wing airplanes. While both could technically work, <a href="http://aviation.stackexchange.com/a/5192/18340">fixed wing airplanes are more efficient than helicopters</a>.</p>
+
+<p>Fixed wing airplanes have a lower Lift/Drag ratio (something we’ll talk about in the next post) than Helicopters.</p>
+
+<p>Ladies and gents, we have a winner. <strong>We’re going ahead with a fixed wing aircraft!</strong></p>
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>

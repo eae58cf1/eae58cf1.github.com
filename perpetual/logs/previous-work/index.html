@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Previous work on Solar UAVs</title>
+  <meta name="description" content="This is something I probably should've done from the get-go. Here, I review previous work done on Solar UAVs and how they can help me get this up in the air ...">
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:900|Work+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="https://yaz.in/perpetual/logs/previous-work/">
+  <link rel="alternate" type="application/rss+xml" title="Yazin Alirhayim" href="https://yazin.org/feed.xml">
+
+  <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+  <script>
+  (function(){
+  	/* permanently redirect all traffic to https, keeping the path */
+    var fullPath, host, ptnHost, subPath, ptnSubPath, result;
+
+    ptnHost = /^https?:\/\/([a-z0-9.]*)[:\d]*?\/.*$/i; // localhost, google.com
+    ptnSubPath = /^http:\/\/(.*?)(\/.*)$/i; // *, where "http://host/*"
+
+    fullPath = window.location.toString();
+    host = ptnHost.exec(fullPath); host = host[host.length - 1];
+    subPath = ptnSubPath.exec(fullPath);
+    if(subPath !== null && host != "localhost" && host != "127.0.0.1") {
+      /* production URL thats using HTTP -- redirect to HTTPS sub-path */
+      window.location.protocol = "https:";
+    }
+  })(); 
+  </script>
+</head>
+
+<body>
+<header> 
+  <div class="links"> 
+  
+    
+  
+     
+      <a class="page-link" href="/bookshelf/">My Bookshelf</a>
+    
+  
+    
+  
+     
+      <a class="page-link" href="/experiments/">Experiments</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+     
+      <a class="page-link" href="/projects/">Projects</a>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+  </div>
+</header>
+
+
+  
+    <h1 class="page-title">Previous work on Solar UAVs</h1>
+  
+
+  <div class="meta"><span>December 28, 2016</span></div>
+<p>Would’ve made more sense to do this at the very beginning, but here goes. It’s good that we still haven’t started building anything so this is still a good stage to take a look at previous attempts made in the Solar UAV space, and to see what we can learn from them.</p>
+
+<h2 id="so-long---48-hour-flight-in-2005">“So Long” - 48 hour flight in 2005</h2>
+<p>The previous record held by a small UAV was the <a href="http://machinedesign.com/news/solar-powered-uav-flies-two-days-straight">48 hour flight</a> by AC propulsion’s So Long vehicle, designed by Alan Cocconi. The flight took place in 2005, but one thing that’s noteworthy is that they had to ride thermals during the day (with the motor off) in order to stay aloft. That’s like cheating, because you’re not always guaranteed access to thermals — oh well.</p>
+
+<h3 id="what-i-learned-from-it">What I learned from it</h3>
+<ul>
+  <li>The use of a load cell to measure the thrust vs. power on the motor/propeller combination was very interesting. This lead me to do some research, after which I discovered <a href="https://youtu.be/PfVJmci9IQQ">this great video</a> and <a href="https://github.com/iforce2d/thrustTester">this accompanying repo</a> which explains how to do this in mind-numbing detail.</li>
+  <li>The use of thermals is an interesting side-note. I’ll look into the possibility of detecting and automatically exploiting these thermals in order to increase flight time.</li>
+</ul>
+
+<h2 id="solar-uav-project-at-umn-2015--2019">Solar UAV project at UMN, 2015 — 2019</h2>
+<p>This is a very similar to the project I’m currently working on — a team at the University of Minnesota led by Prof. Nikolaos Papanikolopoulos recently received a <a href="https://www.nsf.gov/awardsearch/showAward?AWD_ID=1531330&amp;HistoricalAwards=false">$1.5M research grant by the NSF</a> to develop this over the next 3 years.</p>
+<ul>
+  <li>There are 3 papers published to date as part of this research:
+    <ol>
+      <li><a href="http://ieeexplore.ieee.org/document/6630659/">Solar powered unmanned aerial vehicle for continuous flight: Conceptual overview and optimization</a> — published in 2013</li>
+      <li><a href="http://ieeexplore.ieee.org/document/7353711/">Solar powered UAV: Design and experiments</a> — published Oct 2015</li>
+      <li><a href="http://ieeexplore.ieee.org/document/7759272/">Two Meter Solar UAV: Design Approach and Performance Prediction for Autonomous Sensing Applications</a> — publised Oct 2016</li>
+    </ol>
+  </li>
+  <li>I noticed alot of overlap between what I’ve already done and some of the work published in these research papers. In research #2, they actually ran an experiment with a working prototype of their design — and were able to capture enough solar power to account for “over 300% of a conservative estimate of the power required for level flight”. The prototype they are using has a 4m wing span, and is super-light, using the same Sunpower C60 cells that I’m using.</li>
+  <li>They even have a <em>very similar</em> flow chart to <a href="/perpetual/masterplan/">the one I had made in the masterplan</a> showing how the various calculations influence each other: <img src="/assets/projects/perpetual/previous-work-umn-chart.png" alt="Flow chart from #1 - Solar powered unmanned aerial vehicle for continuous flight research" /> .. Insane huh?</li>
+</ul>
+
+<h3 id="what-i-learned-from-it-1">What I learned from it</h3>
+<ul>
+  <li>They’ve done a lot of solid work on the theoretical side of things. The paper is very easy to read (not normal for research papers, btw), and follows a logical approach when determining the different design characteristics of the plane. I was planning on using a brute force approach to things, whereby I write a script to run through a range of characteristics and calculate the expected flight times as a result. Their approach is more scientific, methodical and it makes perfect sense. For example, they do an excellent job of tying the aerodynamic characteristics of the plane with the power consumption and generation aspects of the battery &amp; solar systems respectively. The results are great:</li>
+</ul>
+
+<p><img src="/assets/projects/perpetual/previous-work-umn-solar-vs-flight.png" alt="Solar weight vs. Battery weight vs. Hours of spare charge" /></p>
+<ul>
+  <li>The 2m-ish wing span that I was aiming for isn’t going to cut it. Paper #3 above (Two Meter Solar UAV) talks about what <em>can</em> be accomplished in a sub-2m wing span aircraft: “Maximum flight time for the two meter airframe considered is estimated to be greater than ten hours”, which is conservative considering that the theoretical limit is closer to 40 hours. I may consider using the optimized results shared below in building the initial version on the plane (I do not want to build a 4m monster of a plane): <img src="/assets/projects/perpetual/previous-work-2m-results.png" alt="Optimized results for 2m winged Solar UAV - Source: 3. Two Meter Solar UAV: &copy; IEEE" /></li>
+  <li>I’m going to be doing a deep-dive into the mathematics involved in these papers. Will update this link once that’s done.</li>
+</ul>
+
+
+
+<footer> 
+</footer>
+
+<!-- Google Analytics Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89256258-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
